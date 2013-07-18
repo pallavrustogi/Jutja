@@ -13,4 +13,8 @@ module.exports.policies = {
 	{
 		'*': true
 	}
+	
+	userController:
+	{
+	      create :'set_owner'
 };
