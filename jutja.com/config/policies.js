@@ -4,18 +4,13 @@
 * Below, use the string name of the middleware
 */
 module.exports.policies = {
-
-	// Default policy (allow public access)
-	'*': true
-
-	/** Example mapping: 
-	someController: {
-
-		// Apply the "authenticated" policy to all actions
-		'*': 'authenticated',
-
-		// For someAction, apply 'somePolicy' instead
-		someAction: 'somePolicy'
+  // default require authentication
+  // see api/policies/authenticated.js
+	'*': 'authenticated',
+ 
+  // whitelist the auth controller
+	'auth':
+	{
+		'*': true
 	}
-	*/
 };
