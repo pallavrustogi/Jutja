@@ -6,8 +6,10 @@ module.exports = {
 
 	attributes: {
 
-		// Simple attribute:
-		// name: 'STRING',
+		
+		name: 'STRING',
+		description: 'String',
+		children: 'String'
 
 		// Or for more flexibility:
 		// phoneNumber: {
