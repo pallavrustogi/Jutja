@@ -13,8 +13,8 @@ module.exports.policies = {
 	{
 		'*': true
 	}
-	
-	userController:
+	//prustogi: commented as not working
+	/*userController:
 	{
-	      create :'set_owner'
+	      create :'set_owner'*/
 };
