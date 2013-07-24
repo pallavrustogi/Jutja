@@ -13,19 +13,19 @@ var SessionController = {
             return res.send('No username or password specified!', 500);
         }
         // Lookup the user in the database
-        User.find({
+        User.findOne({
             username: username
         }).exec(function (err, user) {
 
             // Account not found
             if (err || !user) {
-                return res.send('Invalid username and password combination!', 500);
+                return res.send('Invalid username ', 500);
             }
 
             // Compare the passwords
             bcrypt.compare(password, user.password, function(err, valid) {
                 if(err || !valid)
-                    return res.send('Invalid username and password combination!', 500)
+                    return res.send('Invalid  password combination!', 500)
 
                 // The user has authenticated successfully, set their session
                 req.session.authenticated = true;
@@ -65,7 +65,7 @@ var SessionController = {
                     req.session.User = user;
 
                     // Redirect to protected area
-                    return res.redirect('/desktop');
+                    return res.redirect('/');
                 })
 
             });

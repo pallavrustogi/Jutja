@@ -13,32 +13,27 @@
 
 <div class="top-bar">
     <div class="container clearfix">
-        <!--<img class="logo" src="http://sailsjs.org/images/sails-logo.jpg" /> -->
+         <!--<img class="logo" src="http://sailsjs.org/images/sails-logo.jpg" /> -->
     </div>
 </div>
 
 <div class="container clearfix">
     <div class="main">
-        <h1 id="main-title">Welcome to JutJa.com</h1><br>
-        
-        <h2>Getting started</h2>
-        <p>Don't worry, we've got your back.</p>
-        
-        <div class="delete">
-            <div class="sprite">Coming very soon to your nearest <span class="boxy">Internet Hottest Destination</span></div>
+        <h1 id="main-title">Welcome to Jutja.com</h1>
+        <p>Enter your Desired Username and password to get started</p>
+        <div class="steps">
+            <ul class="getting-started">
+                <form action = "/session/signup">
+		  Username:<input type="text" name="username" /><br>
+		 Password:<input type="password" name="password" /><br>
+		 Retype password:<input type="password" name="password-confirm" /><br>
+		  <input type= "submit">
+                 
+            </ul>
         </div>
-    </div>
-    <div class="side-bar">
-       
-        <h4>
-            Get Started !!
-        </h4>
-        <ul>
-            <li class="sprite single_page">
-                <a target="_blank" href="/login">Click here to Login</a>
-            </li>
-            <li class="sprite traditional"><a href="/signup">Click here to Signup</a>
-            </li>
-        </ul>
+         <div class="sprite">Important information <span class="boxy">Boxed content</span></div>
+        </div>
+      <div class="side-bar">
+        Sidebar Content
     </div>
 </div>

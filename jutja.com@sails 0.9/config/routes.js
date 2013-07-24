@@ -35,6 +35,12 @@ module.exports.routes = {
   '/': {
     view: 'home/index'
   },
+   '/login': {
+    view: 'home/login'
+  },
+  '/signup': {
+    view: 'home/signup'
+  },
   
   '/session/login': {
     controller: 'SessionController',
