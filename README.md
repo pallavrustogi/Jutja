@@ -22,5 +22,7 @@ Dev Env       : https://dev.jutja.com
 
 The logic guide -
 "session/login" to login , variables required username and password
+
 "session/signup" to signup variable required username ,password and password-confirm 
+
 "session/logout" to logout 
