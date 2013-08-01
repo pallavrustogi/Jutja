@@ -1,0 +1,1019 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', '-g', 'install', 'sails' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /root/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+silly exec /usr/bin/node "/usr/share/npm/bin/npm-get-uid-gid.js" "nobody" 0
+silly spawning [ '/usr/bin/node',
+silly spawning   [ '/usr/share/npm/bin/npm-get-uid-gid.js', 'nobody', 0 ],
+silly spawning   null ]
+silly output from getuid/gid {"uid":65534,"gid":0}
+silly output from getuid/gid 
+verbose cache add [ 'sails', null ]
+silly cache add: name, spec, args [ undefined, 'sails', [ 'sails', null ] ]
+verbose parsed url { pathname: 'sails', path: 'sails', href: 'sails' }
+verbose addNamed [ 'sails', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'sails', '', false ]
+verbose raw, before any munging sails
+verbose url resolving [ 'https://registry.npmjs.org/', './sails' ]
+verbose url resolved https://registry.npmjs.org/sails
+verbose etag "4NHOLXZLDBCZHBOX2QBY34LM5"
+http GET https://registry.npmjs.org/sails
+http 304 https://registry.npmjs.org/sails
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4NHOLXZLDBCZHBOX2QBY34LM5"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:38 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag sails from cache
+silly name, range, hasData 2 [ 'sails', '', true ]
+silly versions [ 'sails',
+silly versions   [ '0.0.0',
+silly versions     '0.0.0-2',
+silly versions     '0.7.0',
+silly versions     '0.7.0-2',
+silly versions     '0.7.0-3',
+silly versions     '0.7.0-4',
+silly versions     '0.7.0-5',
+silly versions     '0.0.0-1',
+silly versions     '0.7.0-6',
+silly versions     '0.8.894',
+silly versions     '0.8.895',
+silly versions     '0.8.9',
+silly versions     '0.8.91',
+silly versions     '0.8.92',
+silly versions     '0.8.93',
+silly versions     '0.8.94' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'cd0328e3f98823798c61f6f5ae9db3aec87401a7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/sails/-/sails-0.8.895.tgz' } ]
+verbose caching /root/.npm/sails/0.8.895/package/package.json
+verbose loadDefaults sails@0.8.895
+silly resolved [ { name: 'sails',
+silly resolved     author: { name: 'Mike McNeil', email: 'mike@balderdash.co' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Mike McNeil',
+silly resolved          email: 'mike@balderdash.co',
+silly resolved          url: 'http://michaelmcneil.com' },
+silly resolved        { name: 'virpool' },
+silly resolved        { name: 'Dennis Bartlett', email: 'dcbartlett@gmail.com' },
+silly resolved        { name: 'themouette' },
+silly resolved        { name: 'valinorsgatekeeper' },
+silly resolved        { name: 'Brad Carleton',
+silly resolved          email: 'brad@techpines.com',
+silly resolved          url: 'http://techpines.com' },
+silly resolved        { name: 'Gabe Hernandez', email: 'gabe@balderdash.co' },
+silly resolved        { name: 'Curtis Lacy', email: 'curtis.lacy@ldengine.com' } ],
+silly resolved     version: '0.8.895',
+silly resolved     description: 'API-driven framework for building realtime apps, using MVC conventions (based on Express and Socket.io)',
+silly resolved     homepage: 'http://sailsjs.com',
+silly resolved     keywords: 
+silly resolved      [ 'mvc',
+silly resolved        'web-framework',
+silly resolved        'rails',
+silly resolved        'ruby-on-rails',
+silly resolved        'express',
+silly resolved        'sails',
+silly resolved        'sailsjs',
+silly resolved        'sails.js',
+silly resolved        'REST',
+silly resolved        'API',
+silly resolved        'orm',
+silly resolved        'mysql',
+silly resolved        'active-record',
+silly resolved        'socket.io' ],
+silly resolved     main: './lib/sails',
+silly resolved     bin: { sails: './bin/sails.js' },
+silly resolved     scripts: { test: 'node test/start.js' },
+silly resolved     directories: { lib: 'lib' },
+silly resolved     dependencies: 
+silly resolved      { 'sails-dirty': '0.7.3',
+silly resolved        express: '2.5.11',
+silly resolved        'socket.io': '0.9.6',
+silly resolved        ejs: '0.7.2',
+silly resolved        connect: '1.8.3',
+silly resolved        async: '0.1.22',
+silly resolved        underscore: '1.4.2',
+silly resolved        less: '1.3.0',
+silly resolved        optimist: '0.3.4',
+silly resolved        'underscore.string': '2.3.0',
+silly resolved        glob: '3.1.14',
+silly resolved        winston: '0.6.2',
+silly resolved        'fs-extra': '0.5.0',
+silly resolved        i18n: '0.3.5',
+silly resolved        wrench: '1.4.4',
+silly resolved        'uglify-js': '2.2.4',
+silly resolved        'asset-rack': '2.0.6',
+silly resolved        'node-uuid': '~1.4.0',
+silly resolved        parley: '0.0.2',
+silly resolved        'include-all': '0.0.5',
+silly resolved        forever: '~0.10.0',
+silly resolved        'clean-css': '0.10.1',
+silly resolved        'fs-watch-tree': '~0.2.2',
+silly resolved        jade: '0.28.0' },
+silly resolved     devDependencies: { mocha: '*', chai: '*', 'coffee-script': '*', request: '*' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/balderdashy/sails.git' },
+silly resolved     licenses: [ { type: 'MIT', url: 'http://sails.mit-license.org/' } ],
+silly resolved     bugs: { url: 'http://github.com/balderdashy/sails/issues' },
+silly resolved     engines: { node: '<= 0.10.0' },
+silly resolved     _id: 'sails@0.8.895',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'sails' } ]
+info into /usr/local/lib sails@0.8.895
+info installOne sails@0.8.895
+verbose from cache /root/.npm/sails/0.8.895/package/package.json
+info unbuild /usr/local/lib/node_modules/sails
+verbose mkdir (expected) error ENOENT, no such file or directory '/usr/local/lib/node_modules/___sails.npm'
+verbose mkdir done: /usr/local/lib/node_modules/___sails.npm 755
+verbose unpack_ uid, gid [ 65534, 0 ]
+verbose unpackTarget /usr/local/lib/node_modules/sails
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/LICENSE.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/.htaccess
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/i18n.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/router.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/loader.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/pubsub.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/util.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/configuration.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/express.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/package.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/request.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/logger.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/policies.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/interpreter.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/sails.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/assets.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/defaultTransactionCollection.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/adapter.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/normalize.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/collection.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/stream.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/config.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/deferredObject.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/augmentAttributes.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/waterline/waterline.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/scaffolds
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/scaffolds/notFound.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/scaffolds/controller.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/lib/scaffolds/error.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/start.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai/test.coffee
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai/test
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai/fixtures
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai/fixtures/routes.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/chai/fixtures/HelloController.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/defaultsTo.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/bootstrap.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/nullValues.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/aggregateQueries.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/queryEdgeCases.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/deferred.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/transactions.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/definitions.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/save.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/subAttributeQueries.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/init.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/sort.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/likeQueries.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/limit.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/stream.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/dynamicFinders.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/count.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/inQuery.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/crud.transactions.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/skip.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/caseSensitivity.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/adapter/crud.test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/collections
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/test/waterline/collections/User.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/mockSails.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/sails.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/gitignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/robots.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/sails.io.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/adapter-persistent.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/adapter.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/model.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/component.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/view.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/app.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/attribute.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/adapter-crud.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/controller.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/template.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/indexAction.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/reset.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/layout.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/action.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/.gitkeep
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/federatedAction.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/favicon.ico
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade/500.jade
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade/index.jade
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade/404.jade
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade/config.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/jade/layout.jade
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml/layout.haml
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml/404.haml
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml/index.haml
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml/500.haml
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/haml/config.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs/layout.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs/index.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs/config.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs/500.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/ejs/404.ejs
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/policies
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/policies/authenticated.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/bootstrap.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/application.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/routes.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/local.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/policies.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/adapters.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/assets.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/locales
+silly asyncMap in gTP /usr/local/lib/node_modules/___sails.npm/package/bin/blueprints/config/locales/english.js
+verbose gunzed /usr/local/lib/node_modules/___sails.npm/package
+verbose rm'ed /usr/local/lib/node_modules/sails
+verbose renamed [ '/usr/local/lib/node_modules/___sails.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/sails' ]
+verbose caching /usr/local/lib/node_modules/sails/package.json
+verbose loadDefaults sails@0.8.895
+info preinstall sails@0.8.895
+verbose from cache /usr/local/lib/node_modules/sails/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/sails/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'sails-dirty@0.7.3', null ]
+silly cache add: name, spec, args [ undefined, 'sails-dirty@0.7.3', [ 'sails-dirty@0.7.3', null ] ]
+verbose parsed url { pathname: 'sails-dirty@0.7.3',
+verbose parsed url   path: 'sails-dirty@0.7.3',
+verbose parsed url   href: 'sails-dirty@0.7.3' }
+silly cache add: name, spec, args [ 'sails-dirty', '0.7.3', [ 'sails-dirty', '0.7.3' ] ]
+verbose parsed url { pathname: '0.7.3', path: '0.7.3', href: '0.7.3' }
+verbose addNamed [ 'sails-dirty', '0.7.3' ]
+verbose addNamed [ '0.7.3', '0.7.3' ]
+verbose raw, before any munging sails-dirty/0.7.3
+verbose url resolving [ 'https://registry.npmjs.org/', './sails-dirty/0.7.3' ]
+verbose url resolved https://registry.npmjs.org/sails-dirty/0.7.3
+verbose etag "22P92KRI4048CVQYZ0JUIB9Z5"
+http GET https://registry.npmjs.org/sails-dirty/0.7.3
+verbose cache add [ 'express@2.5.11', null ]
+silly cache add: name, spec, args [ undefined, 'express@2.5.11', [ 'express@2.5.11', null ] ]
+verbose parsed url { pathname: 'express@2.5.11',
+verbose parsed url   path: 'express@2.5.11',
+verbose parsed url   href: 'express@2.5.11' }
+silly cache add: name, spec, args [ 'express', '2.5.11', [ 'express', '2.5.11' ] ]
+verbose parsed url { pathname: '2.5.11', path: '2.5.11', href: '2.5.11' }
+verbose addNamed [ 'express', '2.5.11' ]
+verbose addNamed [ '2.5.11', '2.5.11' ]
+verbose cache add [ 'socket.io@0.9.6', null ]
+silly cache add: name, spec, args [ undefined, 'socket.io@0.9.6', [ 'socket.io@0.9.6', null ] ]
+verbose parsed url { pathname: 'socket.io@0.9.6',
+verbose parsed url   path: 'socket.io@0.9.6',
+verbose parsed url   href: 'socket.io@0.9.6' }
+silly cache add: name, spec, args [ 'socket.io', '0.9.6', [ 'socket.io', '0.9.6' ] ]
+verbose parsed url { pathname: '0.9.6', path: '0.9.6', href: '0.9.6' }
+verbose addNamed [ 'socket.io', '0.9.6' ]
+verbose addNamed [ '0.9.6', '0.9.6' ]
+verbose cache add [ 'ejs@0.7.2', null ]
+silly cache add: name, spec, args [ undefined, 'ejs@0.7.2', [ 'ejs@0.7.2', null ] ]
+verbose parsed url { pathname: 'ejs@0.7.2', path: 'ejs@0.7.2', href: 'ejs@0.7.2' }
+silly cache add: name, spec, args [ 'ejs', '0.7.2', [ 'ejs', '0.7.2' ] ]
+verbose parsed url { pathname: '0.7.2', path: '0.7.2', href: '0.7.2' }
+verbose addNamed [ 'ejs', '0.7.2' ]
+verbose addNamed [ '0.7.2', '0.7.2' ]
+verbose cache add [ 'connect@1.8.3', null ]
+silly cache add: name, spec, args [ undefined, 'connect@1.8.3', [ 'connect@1.8.3', null ] ]
+verbose parsed url { pathname: 'connect@1.8.3',
+verbose parsed url   path: 'connect@1.8.3',
+verbose parsed url   href: 'connect@1.8.3' }
+silly cache add: name, spec, args [ 'connect', '1.8.3', [ 'connect', '1.8.3' ] ]
+verbose parsed url { pathname: '1.8.3', path: '1.8.3', href: '1.8.3' }
+verbose addNamed [ 'connect', '1.8.3' ]
+verbose addNamed [ '1.8.3', '1.8.3' ]
+verbose cache add [ 'async@0.1.22', null ]
+silly cache add: name, spec, args [ undefined, 'async@0.1.22', [ 'async@0.1.22', null ] ]
+verbose parsed url { pathname: 'async@0.1.22',
+verbose parsed url   path: 'async@0.1.22',
+verbose parsed url   href: 'async@0.1.22' }
+silly cache add: name, spec, args [ 'async', '0.1.22', [ 'async', '0.1.22' ] ]
+verbose parsed url { pathname: '0.1.22', path: '0.1.22', href: '0.1.22' }
+verbose addNamed [ 'async', '0.1.22' ]
+verbose addNamed [ '0.1.22', '0.1.22' ]
+verbose cache add [ 'underscore@1.4.2', null ]
+silly cache add: name, spec, args [ undefined, 'underscore@1.4.2', [ 'underscore@1.4.2', null ] ]
+verbose parsed url { pathname: 'underscore@1.4.2',
+verbose parsed url   path: 'underscore@1.4.2',
+verbose parsed url   href: 'underscore@1.4.2' }
+silly cache add: name, spec, args [ 'underscore', '1.4.2', [ 'underscore', '1.4.2' ] ]
+verbose parsed url { pathname: '1.4.2', path: '1.4.2', href: '1.4.2' }
+verbose addNamed [ 'underscore', '1.4.2' ]
+verbose addNamed [ '1.4.2', '1.4.2' ]
+verbose cache add [ 'less@1.3.0', null ]
+silly cache add: name, spec, args [ undefined, 'less@1.3.0', [ 'less@1.3.0', null ] ]
+verbose parsed url { pathname: 'less@1.3.0',
+verbose parsed url   path: 'less@1.3.0',
+verbose parsed url   href: 'less@1.3.0' }
+silly cache add: name, spec, args [ 'less', '1.3.0', [ 'less', '1.3.0' ] ]
+verbose parsed url { pathname: '1.3.0', path: '1.3.0', href: '1.3.0' }
+verbose addNamed [ 'less', '1.3.0' ]
+verbose addNamed [ '1.3.0', '1.3.0' ]
+verbose raw, before any munging express/2.5.11
+verbose url resolving [ 'https://registry.npmjs.org/', './express/2.5.11' ]
+verbose url resolved https://registry.npmjs.org/express/2.5.11
+verbose etag "385QWK8LVDMS58Y4AEFWUYVZQ"
+http GET https://registry.npmjs.org/express/2.5.11
+verbose raw, before any munging socket.io/0.9.6
+verbose url resolving [ 'https://registry.npmjs.org/', './socket.io/0.9.6' ]
+verbose url resolved https://registry.npmjs.org/socket.io/0.9.6
+verbose etag "JOXG1WK23TP1ZG6L5CU05ZC6"
+http GET https://registry.npmjs.org/socket.io/0.9.6
+verbose raw, before any munging ejs/0.7.2
+verbose url resolving [ 'https://registry.npmjs.org/', './ejs/0.7.2' ]
+verbose url resolved https://registry.npmjs.org/ejs/0.7.2
+verbose etag "8BHMNP0QRSYC3L6YGFNXS88TT"
+http GET https://registry.npmjs.org/ejs/0.7.2
+verbose raw, before any munging connect/1.8.3
+verbose url resolving [ 'https://registry.npmjs.org/', './connect/1.8.3' ]
+verbose url resolved https://registry.npmjs.org/connect/1.8.3
+verbose etag "1X90DI6YKLPOM46N1FTCR30NR"
+http GET https://registry.npmjs.org/connect/1.8.3
+verbose cache add [ 'optimist@0.3.4', null ]
+silly cache add: name, spec, args [ undefined, 'optimist@0.3.4', [ 'optimist@0.3.4', null ] ]
+verbose parsed url { pathname: 'optimist@0.3.4',
+verbose parsed url   path: 'optimist@0.3.4',
+verbose parsed url   href: 'optimist@0.3.4' }
+silly cache add: name, spec, args [ 'optimist', '0.3.4', [ 'optimist', '0.3.4' ] ]
+verbose parsed url { pathname: '0.3.4', path: '0.3.4', href: '0.3.4' }
+verbose addNamed [ 'optimist', '0.3.4' ]
+verbose addNamed [ '0.3.4', '0.3.4' ]
+verbose cache add [ 'underscore.string@2.3.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'underscore.string@2.3.0',
+silly cache add: name, spec, args   [ 'underscore.string@2.3.0', null ] ]
+verbose parsed url { pathname: 'underscore.string@2.3.0',
+verbose parsed url   path: 'underscore.string@2.3.0',
+verbose parsed url   href: 'underscore.string@2.3.0' }
+silly cache add: name, spec, args [ 'underscore.string',
+silly cache add: name, spec, args   '2.3.0',
+silly cache add: name, spec, args   [ 'underscore.string', '2.3.0' ] ]
+verbose parsed url { pathname: '2.3.0', path: '2.3.0', href: '2.3.0' }
+verbose addNamed [ 'underscore.string', '2.3.0' ]
+verbose addNamed [ '2.3.0', '2.3.0' ]
+verbose cache add [ 'glob@3.1.14', null ]
+silly cache add: name, spec, args [ undefined, 'glob@3.1.14', [ 'glob@3.1.14', null ] ]
+verbose parsed url { pathname: 'glob@3.1.14',
+verbose parsed url   path: 'glob@3.1.14',
+verbose parsed url   href: 'glob@3.1.14' }
+silly cache add: name, spec, args [ 'glob', '3.1.14', [ 'glob', '3.1.14' ] ]
+verbose parsed url { pathname: '3.1.14', path: '3.1.14', href: '3.1.14' }
+verbose addNamed [ 'glob', '3.1.14' ]
+verbose addNamed [ '3.1.14', '3.1.14' ]
+verbose cache add [ 'winston@0.6.2', null ]
+silly cache add: name, spec, args [ undefined, 'winston@0.6.2', [ 'winston@0.6.2', null ] ]
+verbose parsed url { pathname: 'winston@0.6.2',
+verbose parsed url   path: 'winston@0.6.2',
+verbose parsed url   href: 'winston@0.6.2' }
+silly cache add: name, spec, args [ 'winston', '0.6.2', [ 'winston', '0.6.2' ] ]
+verbose parsed url { pathname: '0.6.2', path: '0.6.2', href: '0.6.2' }
+verbose addNamed [ 'winston', '0.6.2' ]
+verbose addNamed [ '0.6.2', '0.6.2' ]
+verbose cache add [ 'fs-extra@0.5.0', null ]
+silly cache add: name, spec, args [ undefined, 'fs-extra@0.5.0', [ 'fs-extra@0.5.0', null ] ]
+verbose parsed url { pathname: 'fs-extra@0.5.0',
+verbose parsed url   path: 'fs-extra@0.5.0',
+verbose parsed url   href: 'fs-extra@0.5.0' }
+silly cache add: name, spec, args [ 'fs-extra', '0.5.0', [ 'fs-extra', '0.5.0' ] ]
+verbose parsed url { pathname: '0.5.0', path: '0.5.0', href: '0.5.0' }
+verbose addNamed [ 'fs-extra', '0.5.0' ]
+verbose addNamed [ '0.5.0', '0.5.0' ]
+verbose cache add [ 'i18n@0.3.5', null ]
+silly cache add: name, spec, args [ undefined, 'i18n@0.3.5', [ 'i18n@0.3.5', null ] ]
+verbose parsed url { pathname: 'i18n@0.3.5',
+verbose parsed url   path: 'i18n@0.3.5',
+verbose parsed url   href: 'i18n@0.3.5' }
+silly cache add: name, spec, args [ 'i18n', '0.3.5', [ 'i18n', '0.3.5' ] ]
+verbose parsed url { pathname: '0.3.5', path: '0.3.5', href: '0.3.5' }
+verbose addNamed [ 'i18n', '0.3.5' ]
+verbose addNamed [ '0.3.5', '0.3.5' ]
+verbose cache add [ 'wrench@1.4.4', null ]
+silly cache add: name, spec, args [ undefined, 'wrench@1.4.4', [ 'wrench@1.4.4', null ] ]
+verbose parsed url { pathname: 'wrench@1.4.4',
+verbose parsed url   path: 'wrench@1.4.4',
+verbose parsed url   href: 'wrench@1.4.4' }
+silly cache add: name, spec, args [ 'wrench', '1.4.4', [ 'wrench', '1.4.4' ] ]
+verbose parsed url { pathname: '1.4.4', path: '1.4.4', href: '1.4.4' }
+verbose addNamed [ 'wrench', '1.4.4' ]
+verbose addNamed [ '1.4.4', '1.4.4' ]
+verbose cache add [ 'uglify-js@2.2.4', null ]
+silly cache add: name, spec, args [ undefined, 'uglify-js@2.2.4', [ 'uglify-js@2.2.4', null ] ]
+verbose parsed url { pathname: 'uglify-js@2.2.4',
+verbose parsed url   path: 'uglify-js@2.2.4',
+verbose parsed url   href: 'uglify-js@2.2.4' }
+silly cache add: name, spec, args [ 'uglify-js', '2.2.4', [ 'uglify-js', '2.2.4' ] ]
+verbose parsed url { pathname: '2.2.4', path: '2.2.4', href: '2.2.4' }
+verbose addNamed [ 'uglify-js', '2.2.4' ]
+verbose addNamed [ '2.2.4', '2.2.4' ]
+verbose cache add [ 'asset-rack@2.0.6', null ]
+silly cache add: name, spec, args [ undefined, 'asset-rack@2.0.6', [ 'asset-rack@2.0.6', null ] ]
+verbose parsed url { pathname: 'asset-rack@2.0.6',
+verbose parsed url   path: 'asset-rack@2.0.6',
+verbose parsed url   href: 'asset-rack@2.0.6' }
+silly cache add: name, spec, args [ 'asset-rack', '2.0.6', [ 'asset-rack', '2.0.6' ] ]
+verbose parsed url { pathname: '2.0.6', path: '2.0.6', href: '2.0.6' }
+verbose addNamed [ 'asset-rack', '2.0.6' ]
+verbose addNamed [ '2.0.6', '2.0.6' ]
+verbose cache add [ 'node-uuid@~1.4.0', null ]
+silly cache add: name, spec, args [ undefined, 'node-uuid@~1.4.0', [ 'node-uuid@~1.4.0', null ] ]
+verbose parsed url { pathname: 'node-uuid@~1.4.0',
+verbose parsed url   path: 'node-uuid@~1.4.0',
+verbose parsed url   href: 'node-uuid@~1.4.0' }
+silly cache add: name, spec, args [ 'node-uuid', '~1.4.0', [ 'node-uuid', '~1.4.0' ] ]
+verbose parsed url { pathname: '~1.4.0', path: '~1.4.0', href: '~1.4.0' }
+verbose addNamed [ 'node-uuid', '~1.4.0' ]
+verbose addNamed [ null, '>=1.4.0- <1.5.0-' ]
+silly name, range, hasData [ 'node-uuid', '>=1.4.0- <1.5.0-', false ]
+verbose raw, before any munging async/0.1.22
+verbose url resolving [ 'https://registry.npmjs.org/', './async/0.1.22' ]
+verbose url resolved https://registry.npmjs.org/async/0.1.22
+verbose etag "2LCINB1NO6CHD2SA3J6M2W4G7"
+http GET https://registry.npmjs.org/async/0.1.22
+verbose raw, before any munging underscore/1.4.2
+verbose url resolving [ 'https://registry.npmjs.org/', './underscore/1.4.2' ]
+verbose url resolved https://registry.npmjs.org/underscore/1.4.2
+verbose etag "27LECG52TMHOVO9SGVT3ZMNHT"
+http GET https://registry.npmjs.org/underscore/1.4.2
+verbose raw, before any munging less/1.3.0
+verbose url resolving [ 'https://registry.npmjs.org/', './less/1.3.0' ]
+verbose url resolved https://registry.npmjs.org/less/1.3.0
+verbose etag "4FDIMSYEIDO152SMZBKHSN7KI"
+http GET https://registry.npmjs.org/less/1.3.0
+verbose cache add [ 'parley@0.0.2', null ]
+silly cache add: name, spec, args [ undefined, 'parley@0.0.2', [ 'parley@0.0.2', null ] ]
+verbose parsed url { pathname: 'parley@0.0.2',
+verbose parsed url   path: 'parley@0.0.2',
+verbose parsed url   href: 'parley@0.0.2' }
+silly cache add: name, spec, args [ 'parley', '0.0.2', [ 'parley', '0.0.2' ] ]
+verbose parsed url { pathname: '0.0.2', path: '0.0.2', href: '0.0.2' }
+verbose addNamed [ 'parley', '0.0.2' ]
+verbose addNamed [ '0.0.2', '0.0.2' ]
+verbose cache add [ 'include-all@0.0.5', null ]
+silly cache add: name, spec, args [ undefined, 'include-all@0.0.5', [ 'include-all@0.0.5', null ] ]
+verbose parsed url { pathname: 'include-all@0.0.5',
+verbose parsed url   path: 'include-all@0.0.5',
+verbose parsed url   href: 'include-all@0.0.5' }
+silly cache add: name, spec, args [ 'include-all', '0.0.5', [ 'include-all', '0.0.5' ] ]
+verbose parsed url { pathname: '0.0.5', path: '0.0.5', href: '0.0.5' }
+verbose addNamed [ 'include-all', '0.0.5' ]
+verbose addNamed [ '0.0.5', '0.0.5' ]
+verbose cache add [ 'forever@~0.10.0', null ]
+silly cache add: name, spec, args [ undefined, 'forever@~0.10.0', [ 'forever@~0.10.0', null ] ]
+verbose parsed url { pathname: 'forever@~0.10.0',
+verbose parsed url   path: 'forever@~0.10.0',
+verbose parsed url   href: 'forever@~0.10.0' }
+silly cache add: name, spec, args [ 'forever', '~0.10.0', [ 'forever', '~0.10.0' ] ]
+verbose parsed url { pathname: '~0.10.0', path: '~0.10.0', href: '~0.10.0' }
+verbose addNamed [ 'forever', '~0.10.0' ]
+verbose addNamed [ null, '>=0.10.0- <0.11.0-' ]
+silly name, range, hasData [ 'forever', '>=0.10.0- <0.11.0-', false ]
+verbose cache add [ 'clean-css@0.10.1', null ]
+silly cache add: name, spec, args [ undefined, 'clean-css@0.10.1', [ 'clean-css@0.10.1', null ] ]
+verbose parsed url { pathname: 'clean-css@0.10.1',
+verbose parsed url   path: 'clean-css@0.10.1',
+verbose parsed url   href: 'clean-css@0.10.1' }
+silly cache add: name, spec, args [ 'clean-css', '0.10.1', [ 'clean-css', '0.10.1' ] ]
+verbose parsed url { pathname: '0.10.1', path: '0.10.1', href: '0.10.1' }
+verbose addNamed [ 'clean-css', '0.10.1' ]
+verbose addNamed [ '0.10.1', '0.10.1' ]
+verbose cache add [ 'fs-watch-tree@~0.2.2', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'fs-watch-tree@~0.2.2',
+silly cache add: name, spec, args   [ 'fs-watch-tree@~0.2.2', null ] ]
+verbose parsed url { pathname: 'fs-watch-tree@~0.2.2',
+verbose parsed url   path: 'fs-watch-tree@~0.2.2',
+verbose parsed url   href: 'fs-watch-tree@~0.2.2' }
+silly cache add: name, spec, args [ 'fs-watch-tree', '~0.2.2', [ 'fs-watch-tree', '~0.2.2' ] ]
+verbose parsed url { pathname: '~0.2.2', path: '~0.2.2', href: '~0.2.2' }
+verbose addNamed [ 'fs-watch-tree', '~0.2.2' ]
+verbose addNamed [ null, '>=0.2.2- <0.3.0-' ]
+silly name, range, hasData [ 'fs-watch-tree', '>=0.2.2- <0.3.0-', false ]
+verbose cache add [ 'jade@0.28.0', null ]
+silly cache add: name, spec, args [ undefined, 'jade@0.28.0', [ 'jade@0.28.0', null ] ]
+verbose parsed url { pathname: 'jade@0.28.0',
+verbose parsed url   path: 'jade@0.28.0',
+verbose parsed url   href: 'jade@0.28.0' }
+silly cache add: name, spec, args [ 'jade', '0.28.0', [ 'jade', '0.28.0' ] ]
+verbose parsed url { pathname: '0.28.0', path: '0.28.0', href: '0.28.0' }
+verbose addNamed [ 'jade', '0.28.0' ]
+verbose addNamed [ '0.28.0', '0.28.0' ]
+verbose raw, before any munging optimist/0.3.4
+verbose url resolving [ 'https://registry.npmjs.org/', './optimist/0.3.4' ]
+verbose url resolved https://registry.npmjs.org/optimist/0.3.4
+verbose etag "7VTLKGSF8BV0P8PMZG3SDUJ94"
+http GET https://registry.npmjs.org/optimist/0.3.4
+verbose raw, before any munging underscore.string/2.3.0
+verbose url resolving [ 'https://registry.npmjs.org/', './underscore.string/2.3.0' ]
+verbose url resolved https://registry.npmjs.org/underscore.string/2.3.0
+verbose etag "82KONBUKGVFGLKPUIJ91QHEA4"
+http GET https://registry.npmjs.org/underscore.string/2.3.0
+verbose raw, before any munging glob/3.1.14
+verbose url resolving [ 'https://registry.npmjs.org/', './glob/3.1.14' ]
+verbose url resolved https://registry.npmjs.org/glob/3.1.14
+verbose etag "1A5O9TP9AWMGF2IQZP4VBQL47"
+http GET https://registry.npmjs.org/glob/3.1.14
+verbose raw, before any munging winston/0.6.2
+verbose url resolving [ 'https://registry.npmjs.org/', './winston/0.6.2' ]
+verbose url resolved https://registry.npmjs.org/winston/0.6.2
+verbose etag "17C61T39BSVTTJ6IZQ6IUK9I9"
+http GET https://registry.npmjs.org/winston/0.6.2
+verbose raw, before any munging fs-extra/0.5.0
+verbose url resolving [ 'https://registry.npmjs.org/', './fs-extra/0.5.0' ]
+verbose url resolved https://registry.npmjs.org/fs-extra/0.5.0
+verbose etag "82POE3QDNH7NWC4BG7V2JCYUH"
+http GET https://registry.npmjs.org/fs-extra/0.5.0
+verbose raw, before any munging i18n/0.3.5
+verbose url resolving [ 'https://registry.npmjs.org/', './i18n/0.3.5' ]
+verbose url resolved https://registry.npmjs.org/i18n/0.3.5
+verbose etag "4AI2V2DL37BDYWIM9899X8QKZ"
+http GET https://registry.npmjs.org/i18n/0.3.5
+verbose raw, before any munging wrench/1.4.4
+verbose url resolving [ 'https://registry.npmjs.org/', './wrench/1.4.4' ]
+verbose url resolved https://registry.npmjs.org/wrench/1.4.4
+verbose etag "A6IR6FYYGWDEYLGCI2O4I4RNQ"
+http GET https://registry.npmjs.org/wrench/1.4.4
+verbose raw, before any munging uglify-js/2.2.4
+verbose url resolving [ 'https://registry.npmjs.org/', './uglify-js/2.2.4' ]
+verbose url resolved https://registry.npmjs.org/uglify-js/2.2.4
+verbose etag "4N3IJZ994RON6RVI69JTTVWYU"
+http GET https://registry.npmjs.org/uglify-js/2.2.4
+verbose raw, before any munging asset-rack/2.0.6
+verbose url resolving [ 'https://registry.npmjs.org/', './asset-rack/2.0.6' ]
+verbose url resolved https://registry.npmjs.org/asset-rack/2.0.6
+verbose etag "3T8RPCAO8OTH0F6ASO3D939YK"
+http GET https://registry.npmjs.org/asset-rack/2.0.6
+verbose raw, before any munging node-uuid
+verbose url resolving [ 'https://registry.npmjs.org/', './node-uuid' ]
+verbose url resolved https://registry.npmjs.org/node-uuid
+verbose etag "6HUZF714E21IQQ1CZR2OMQCYL"
+http GET https://registry.npmjs.org/node-uuid
+verbose raw, before any munging parley/0.0.2
+verbose url resolving [ 'https://registry.npmjs.org/', './parley/0.0.2' ]
+verbose url resolved https://registry.npmjs.org/parley/0.0.2
+verbose etag "6M4L5VPWA7S5YGE3LEJEGMIXW"
+http GET https://registry.npmjs.org/parley/0.0.2
+verbose raw, before any munging include-all/0.0.5
+verbose url resolving [ 'https://registry.npmjs.org/', './include-all/0.0.5' ]
+verbose url resolved https://registry.npmjs.org/include-all/0.0.5
+verbose etag "1ZWHCSQ9H8O1J85B8GXP92SYF"
+http GET https://registry.npmjs.org/include-all/0.0.5
+verbose raw, before any munging clean-css/0.10.1
+verbose url resolving [ 'https://registry.npmjs.org/', './clean-css/0.10.1' ]
+verbose url resolved https://registry.npmjs.org/clean-css/0.10.1
+verbose etag "877YM8M0PF7EG4OFJU72N2ZP9"
+http GET https://registry.npmjs.org/clean-css/0.10.1
+verbose raw, before any munging fs-watch-tree
+verbose url resolving [ 'https://registry.npmjs.org/', './fs-watch-tree' ]
+verbose url resolved https://registry.npmjs.org/fs-watch-tree
+verbose etag "3FK1SAH2B0K1E28C7979MC6U5"
+http GET https://registry.npmjs.org/fs-watch-tree
+verbose raw, before any munging jade/0.28.0
+verbose url resolving [ 'https://registry.npmjs.org/', './jade/0.28.0' ]
+verbose url resolved https://registry.npmjs.org/jade/0.28.0
+verbose etag "6E9EYVJ55TY0R48ZBXVEXIU13"
+http GET https://registry.npmjs.org/jade/0.28.0
+verbose raw, before any munging forever
+verbose url resolving [ 'https://registry.npmjs.org/', './forever' ]
+verbose url resolved https://registry.npmjs.org/forever
+verbose etag "EIRCP2UJROF06O40V13YX1K3E"
+http GET https://registry.npmjs.org/forever
+http 304 https://registry.npmjs.org/express/2.5.11
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"385QWK8LVDMS58Y4AEFWUYVZQ"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag express/2.5.11 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '4ce8ea1f3635e69e49f0ebb497b6a4b0a51ce6f0',
+verbose bin dist     tarball: 'http://registry.npmjs.org/express/-/express-2.5.11.tgz' } ]
+verbose caching /root/.npm/express/2.5.11/package/package.json
+verbose loadDefaults express@2.5.11
+http 304 https://registry.npmjs.org/socket.io/0.9.6
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"JOXG1WK23TP1ZG6L5CU05ZC6"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag socket.io/0.9.6 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '6f76255c64f8a471995a1b624f6f16ccae0471e3',
+verbose bin dist     tarball: 'http://registry.npmjs.org/socket.io/-/socket.io-0.9.6.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/socket.io/-/socket.io-0.9.6.tgz',
+verbose addRemoteTarball   '6f76255c64f8a471995a1b624f6f16ccae0471e3' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088'
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339088-0.6746263434179127'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339088-0.6746263434179127 755
+verbose fetch to /tmp/npm-1375344339088/1375344339088-0.6746263434179127/tmp.tgz
+http GET https://registry.npmjs.org/socket.io/-/socket.io-0.9.6.tgz
+http 304 https://registry.npmjs.org/sails-dirty/0.7.3
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"22P92KRI4048CVQYZ0JUIB9Z5"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag sails-dirty/0.7.3 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '95b63634a6cfe82b90eda9ef859be78bafa2539a',
+verbose bin dist     tarball: 'http://registry.npmjs.org/sails-dirty/-/sails-dirty-0.7.3.tgz' } ]
+verbose caching /root/.npm/sails-dirty/0.7.3/package/package.json
+verbose loadDefaults sails-dirty@0.7.3
+http 304 https://registry.npmjs.org/ejs/0.7.2
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"8BHMNP0QRSYC3L6YGFNXS88TT"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag ejs/0.7.2 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '8032ee9f1fccdae8376582fee1c6d80b31aa1bd3',
+verbose bin dist     tarball: 'http://registry.npmjs.org/ejs/-/ejs-0.7.2.tgz' } ]
+verbose caching /root/.npm/ejs/0.7.2/package/package.json
+verbose loadDefaults ejs@0.7.2
+http 304 https://registry.npmjs.org/connect/1.8.3
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"1X90DI6YKLPOM46N1FTCR30NR"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag connect/1.8.3 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '367d8d142b8efe55daaaaa383d3043074748eb66',
+verbose bin dist     tarball: 'http://registry.npmjs.org/connect/-/connect-1.8.3.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/connect/-/connect-1.8.3.tgz',
+verbose addRemoteTarball   '367d8d142b8efe55daaaaa383d3043074748eb66' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339118-0.4060657601803541'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339118-0.4060657601803541 755
+verbose fetch to /tmp/npm-1375344339088/1375344339118-0.4060657601803541/tmp.tgz
+http GET https://registry.npmjs.org/connect/-/connect-1.8.3.tgz
+http 304 https://registry.npmjs.org/async/0.1.22
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"2LCINB1NO6CHD2SA3J6M2W4G7"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag async/0.1.22 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061',
+verbose bin dist     tarball: 'http://registry.npmjs.org/async/-/async-0.1.22.tgz' } ]
+verbose caching /root/.npm/async/0.1.22/package/package.json
+verbose loadDefaults async@0.1.22
+http 304 https://registry.npmjs.org/underscore/1.4.2
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"27LECG52TMHOVO9SGVT3ZMNHT"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag underscore/1.4.2 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'cb2aae6a7999a89fd55aaee75bce0311698cebfb',
+verbose bin dist     tarball: 'http://registry.npmjs.org/underscore/-/underscore-1.4.2.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.4.2.tgz',
+verbose addRemoteTarball   'cb2aae6a7999a89fd55aaee75bce0311698cebfb' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339141-0.23171965358778834'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339141-0.23171965358778834 755
+verbose fetch to /tmp/npm-1375344339088/1375344339141-0.23171965358778834/tmp.tgz
+http GET https://registry.npmjs.org/underscore/-/underscore-1.4.2.tgz
+http 304 https://registry.npmjs.org/less/1.3.0
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4FDIMSYEIDO152SMZBKHSN7KI"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag less/1.3.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '5726170cb5661d7449942c78fb3a894d74e8103c',
+verbose bin dist     tarball: 'http://registry.npmjs.org/less/-/less-1.3.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/less/-/less-1.3.0.tgz',
+verbose addRemoteTarball   '5726170cb5661d7449942c78fb3a894d74e8103c' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339155-0.7048918444197625'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339155-0.7048918444197625 755
+verbose fetch to /tmp/npm-1375344339088/1375344339155-0.7048918444197625/tmp.tgz
+http GET https://registry.npmjs.org/less/-/less-1.3.0.tgz
+http 304 https://registry.npmjs.org/optimist/0.3.4
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"7VTLKGSF8BV0P8PMZG3SDUJ94"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag optimist/0.3.4 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '4d6d0bd71ffad0da4ba4f6d876d5eeb04e07480b',
+verbose bin dist     tarball: 'http://registry.npmjs.org/optimist/-/optimist-0.3.4.tgz' } ]
+verbose caching /root/.npm/optimist/0.3.4/package/package.json
+verbose loadDefaults optimist@0.3.4
+http 304 https://registry.npmjs.org/underscore.string/2.3.0
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"82KONBUKGVFGLKPUIJ91QHEA4"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag underscore.string/2.3.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'c437fd9916e2d05ebb89c45bf1ddaedbb4b9ab02',
+verbose bin dist     tarball: 'http://registry.npmjs.org/underscore.string/-/underscore.string-2.3.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.0.tgz',
+verbose addRemoteTarball   'c437fd9916e2d05ebb89c45bf1ddaedbb4b9ab02' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339171-0.8324797216337174'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339171-0.8324797216337174 755
+verbose fetch to /tmp/npm-1375344339088/1375344339171-0.8324797216337174/tmp.tgz
+http GET https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.0.tgz
+http 304 https://registry.npmjs.org/glob/3.1.14
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"1A5O9TP9AWMGF2IQZP4VBQL47"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag glob/3.1.14 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'f97a731c41da6695dc83944bbb2177e9a29b363d',
+verbose bin dist     tarball: 'http://registry.npmjs.org/glob/-/glob-3.1.14.tgz' } ]
+verbose caching /root/.npm/glob/3.1.14/package/package.json
+verbose loadDefaults glob@3.1.14
+http 304 https://registry.npmjs.org/winston/0.6.2
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"17C61T39BSVTTJ6IZQ6IUK9I9"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag winston/0.6.2 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '4144fe2586cdc19a612bf8c035590132c9064bd2',
+verbose bin dist     tarball: 'http://registry.npmjs.org/winston/-/winston-0.6.2.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/winston/-/winston-0.6.2.tgz',
+verbose addRemoteTarball   '4144fe2586cdc19a612bf8c035590132c9064bd2' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339195-0.9606543441768736'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339195-0.9606543441768736 755
+verbose fetch to /tmp/npm-1375344339088/1375344339195-0.9606543441768736/tmp.tgz
+http GET https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+http 304 https://registry.npmjs.org/fs-extra/0.5.0
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"82POE3QDNH7NWC4BG7V2JCYUH"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag fs-extra/0.5.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '34646dc62c97fa13b1024946bf4174e8c0f05ca4',
+verbose bin dist     tarball: 'http://registry.npmjs.org/fs-extra/-/fs-extra-0.5.0.tgz' } ]
+verbose caching /root/.npm/fs-extra/0.5.0/package/package.json
+verbose loadDefaults fs-extra@0.5.0
+http 304 https://registry.npmjs.org/i18n/0.3.5
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4AI2V2DL37BDYWIM9899X8QKZ"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag i18n/0.3.5 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'fb246dce55c8ff2bf88eb213f56d796ab3d6eba1',
+verbose bin dist     tarball: 'http://registry.npmjs.org/i18n/-/i18n-0.3.5.tgz' } ]
+verbose caching /root/.npm/i18n/0.3.5/package/package.json
+verbose loadDefaults i18n@0.3.5
+http 304 https://registry.npmjs.org/wrench/1.4.4
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"A6IR6FYYGWDEYLGCI2O4I4RNQ"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag wrench/1.4.4 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '7f523efdb71b0100e77dce834c06523cbe3d54e0',
+verbose bin dist     tarball: 'http://registry.npmjs.org/wrench/-/wrench-1.4.4.tgz' } ]
+verbose caching /root/.npm/wrench/1.4.4/package/package.json
+verbose loadDefaults wrench@1.4.4
+http 304 https://registry.npmjs.org/uglify-js/2.2.4
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4N3IJZ994RON6RVI69JTTVWYU"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag uglify-js/2.2.4 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '805b40fa468b1fad4da84f3e04cd0ca26bf80a29',
+verbose bin dist     tarball: 'http://registry.npmjs.org/uglify-js/-/uglify-js-2.2.4.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.2.4.tgz',
+verbose addRemoteTarball   '805b40fa468b1fad4da84f3e04cd0ca26bf80a29' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339246-0.9772066595032811'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339246-0.9772066595032811 755
+verbose fetch to /tmp/npm-1375344339088/1375344339246-0.9772066595032811/tmp.tgz
+http GET https://registry.npmjs.org/uglify-js/-/uglify-js-2.2.4.tgz
+http 304 https://registry.npmjs.org/asset-rack/2.0.6
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"3T8RPCAO8OTH0F6ASO3D939YK"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag asset-rack/2.0.6 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '658e991d22a5a2cd6a9c2eb7fb6c8cfb1e93969c',
+verbose bin dist     tarball: 'http://registry.npmjs.org/asset-rack/-/asset-rack-2.0.6.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/asset-rack/-/asset-rack-2.0.6.tgz',
+verbose addRemoteTarball   '658e991d22a5a2cd6a9c2eb7fb6c8cfb1e93969c' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339249-0.9094200262334198'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339249-0.9094200262334198 755
+verbose fetch to /tmp/npm-1375344339088/1375344339249-0.9094200262334198/tmp.tgz
+http GET https://registry.npmjs.org/asset-rack/-/asset-rack-2.0.6.tgz
+http 304 https://registry.npmjs.org/node-uuid
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"6HUZF714E21IQQ1CZR2OMQCYL"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag node-uuid from cache
+silly name, range, hasData 2 [ 'node-uuid', '>=1.4.0- <1.5.0-', true ]
+silly versions [ 'node-uuid',
+silly versions   [ '1.2.0',
+silly versions     '1.3.0',
+silly versions     '1.3.1',
+silly versions     '1.3.2',
+silly versions     '1.1.0',
+silly versions     '1.0.0',
+silly versions     '1.3.3',
+silly versions     '1.4.0' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '07f9b2337572ff6275c775e1d48513f3a45d7a65',
+verbose bin dist     tarball: 'http://registry.npmjs.org/node-uuid/-/node-uuid-1.4.0.tgz' } ]
+verbose caching /root/.npm/node-uuid/1.4.0/package/package.json
+verbose loadDefaults node-uuid@1.4.0
+http 304 https://registry.npmjs.org/parley/0.0.2
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"6M4L5VPWA7S5YGE3LEJEGMIXW"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag parley/0.0.2 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'cbae619e67aff71616a4cb493c91fe3422d214f9',
+verbose bin dist     tarball: 'http://registry.npmjs.org/parley/-/parley-0.0.2.tgz' } ]
+verbose caching /root/.npm/parley/0.0.2/package/package.json
+verbose loadDefaults parley@0.0.2
+http 304 https://registry.npmjs.org/include-all/0.0.5
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"1ZWHCSQ9H8O1J85B8GXP92SYF"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag include-all/0.0.5 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '1669db801eed70c48ad3b365e2812c30ac2f5b90',
+verbose bin dist     tarball: 'http://registry.npmjs.org/include-all/-/include-all-0.0.5.tgz' } ]
+verbose caching /root/.npm/include-all/0.0.5/package/package.json
+verbose loadDefaults include-all@0.0.5
+http 304 https://registry.npmjs.org/clean-css/0.10.1
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"877YM8M0PF7EG4OFJU72N2ZP9"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag clean-css/0.10.1 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'e8498d90e8aea1840f20b081726c659928047c19',
+verbose bin dist     tarball: 'http://registry.npmjs.org/clean-css/-/clean-css-0.10.1.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/clean-css/-/clean-css-0.10.1.tgz',
+verbose addRemoteTarball   'e8498d90e8aea1840f20b081726c659928047c19' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339296-0.14528880710713565'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339296-0.14528880710713565 755
+verbose fetch to /tmp/npm-1375344339088/1375344339296-0.14528880710713565/tmp.tgz
+http GET https://registry.npmjs.org/clean-css/-/clean-css-0.10.1.tgz
+http 304 https://registry.npmjs.org/fs-watch-tree
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"3FK1SAH2B0K1E28C7979MC6U5"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag fs-watch-tree from cache
+silly name, range, hasData 2 [ 'fs-watch-tree', '>=0.2.2- <0.3.0-', true ]
+silly versions [ 'fs-watch-tree', [ '0.1.0', '0.2.0', '0.2.1', '0.2.2' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: 'ded130c1e9b0dde46ff11e6c4b21a6ba06dd65ad',
+verbose bin dist     tarball: 'http://registry.npmjs.org/fs-watch-tree/-/fs-watch-tree-0.2.2.tgz' } ]
+verbose caching /root/.npm/fs-watch-tree/0.2.2/package/package.json
+verbose loadDefaults fs-watch-tree@0.2.2
+http 304 https://registry.npmjs.org/jade/0.28.0
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"6E9EYVJ55TY0R48ZBXVEXIU13"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag jade/0.28.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-x64-3.2.0-23-virtual',
+verbose bin dist   { shasum: '86be5701b6a14309f79202c3867b18cf75522fa3',
+verbose bin dist     tarball: 'http://registry.npmjs.org/jade/-/jade-0.28.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/jade/-/jade-0.28.0.tgz',
+verbose addRemoteTarball   '86be5701b6a14309f79202c3867b18cf75522fa3' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1375344339088/1375344339320-0.02929154271259904'
+verbose mkdir done: /tmp/npm-1375344339088/1375344339320-0.02929154271259904 755
+verbose fetch to /tmp/npm-1375344339088/1375344339320-0.02929154271259904/tmp.tgz
+http GET https://registry.npmjs.org/jade/-/jade-0.28.0.tgz
+http 304 https://registry.npmjs.org/forever
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"EIRCP2UJROF06O40V13YX1K3E"',
+silly get cb     date: 'Thu, 01 Aug 2013 08:05:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag forever from cache
+silly name, range, hasData 2 [ 'forever', '>=0.10.0- <0.11.0-', true ]
+silly versions [ 'forever',
+silly versions   [ '0.6.0',
+silly versions     '0.6.1',
+silly versions     '0.6.2',
+silly versions     '0.6.3',
+silly versions     '0.6.4',
+silly versions     '0.6.5',
+silly versions     '0.6.6',
+silly versions     '0.6.7',
+silly versions     '0.6.8',
+silly versions     '0.6.9',
+silly versions     '0.7.0',
+silly versions     '0.7.1',
+silly versions     '0.7.2',
+silly versions     '0.7.3',
+silly versions     '0.7.4',
+silly versions     '0.7.5',
+silly versions     '0.8.0',
+silly versions     '0.8.1',
+silly versions     '0.8.2',
+silly versions     '0.8.3',
+silly versions     '0.8.4',
+silly versions     '0.8.5',
+silly versions     '0.9.0',
+silly versions     '0.9.1',
+silly versions     '0.9.2' ] ]
+verbose about to build /usr/local/lib/node_modules/sails
+ERR! error installing sails@0.8.895
+info unbuild /usr/local/lib/node_modules/sails
+verbose from cache /usr/local/lib/node_modules/sails/package.json
+info preuninstall sails@0.8.895
+info uninstall sails@0.8.895
+verbose unbuild sails@0.8.895 [ true,
+verbose unbuild sails@0.8.895   '/usr/local/lib/node_modules',
+verbose unbuild sails@0.8.895   '/usr/local/lib/node_modules' ]
+verbose binRoot [ '/usr/local/bin', { sails: './bin/sails.js' } ]
+http 200 https://registry.npmjs.org/socket.io/-/socket.io-0.9.6.tgz
+info postuninstall sails@0.8.895
+http 200 https://registry.npmjs.org/connect/-/connect-1.8.3.tgz
+http 200 https://registry.npmjs.org/underscore/-/underscore-1.4.2.tgz
+verbose installOne cb sails@0.8.895
+ERR! Error: No compatible version found: forever@'>=0.10.0- <0.11.0-'
+ERR! Valid install targets:
+ERR! ["0.6.0","0.6.1","0.6.2","0.6.3","0.6.4","0.6.5","0.6.6","0.6.7","0.6.8","0.6.9","0.7.0","0.7.1","0.7.2","0.7.3","0.7.4","0.7.5","0.8.0","0.8.1","0.8.2","0.8.3","0.8.4","0.8.5","0.9.0","0.9.1","0.9.2"]
+ERR!     at installTargetsError (/usr/share/npm/lib/cache.js:488:10)
+ERR!     at next_ (/usr/share/npm/lib/cache.js:438:17)
+ERR!     at next (/usr/share/npm/lib/cache.js:415:44)
+ERR!     at /usr/share/npm/lib/cache.js:408:5
+ERR!     at saved (/usr/share/npm/lib/utils/npm-registry-client/get.js:147:7)
+ERR!     at Object.oncomplete (/usr/lib/nodejs/graceful-fs.js:230:7)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /root/sails/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.2.0-23-virtual
+ERR! command "node" "/usr/bin/npm" "-g" "install" "sails"
+ERR! cwd /root/sails
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! message No compatible version found: forever@'>=0.10.0- <0.11.0-'
+ERR! message Valid install targets:
+ERR! message ["0.6.0","0.6.1","0.6.2","0.6.3","0.6.4","0.6.5","0.6.6","0.6.7","0.6.8","0.6.9","0.7.0","0.7.1","0.7.2","0.7.3","0.7.4","0.7.5","0.8.0","0.8.1","0.8.2","0.8.3","0.8.4","0.8.5","0.9.0","0.9.1","0.9.2"]
+verbose exit [ 1, true ]
