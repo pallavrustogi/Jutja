@@ -47,6 +47,11 @@ module.exports.routes = {
     action: 'login'
   },
   
+  '/session/logout': {
+    controller: 'SessionController',
+    action: 'logout'
+  },
+  
   '/session/signup': {
     controller: 'SessionController',
     action: 'register'

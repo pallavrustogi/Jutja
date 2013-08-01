@@ -36,6 +36,17 @@ var SessionController = {
             });
         });
     },
+    
+     logout: function(req, res) {
+
+        
+                req.session.authenticated = false;
+                //req.session.User = Null; currently the user variable is not reset 
+
+                // Redirect to homepage
+                return res.redirect('/');
+            },
+
 
     register: function(req, res){
         var username = req.param('username');
