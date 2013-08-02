@@ -20,9 +20,27 @@ Production Env: https://www.jutja.com
 
 Dev Env       : https://dev.jutja.com
 
-The logic guide -
-"session/login" to login , variables required username and password
+The logic guide
 
-"session/signup" to signup variable required username ,password and password-confirm 
+"/session/login" to login , variables required username and password
 
-"session/logout" to logout 
+"//signup" to signup variable required username ,password and password-confirm 
+
+"/session/logout" to logout 
+
+Our main controller is node . I am currently tring to fuse in the permission logic and stuff. Will be updating this whenever I will add anything
+
+ # Backbone Conventions
+    GET   :    /:controller            => findAll()
+    GET   :    /:controller/read/:id        => find(id)
+    POST  :    /:controller/create        => create()
+    POST  :    /:controller/create/:id        => create(id)
+    PUT   :    /:controller/update/:id        => update(id)
+    DELETE:    /:controller/destroy/:id    => destroy(id)
+
+    # You can also explicitly state the action
+    GET   :    /:controller/findAll        => findAll()
+    GET   :    /:controller/find/:id        => find(id)
+    POST  :    /:controller/create        => create(id)
+    PUT   :    /:controller/update/:id        => update(id)
+    DELETE:    /:controller/destroy/:id    => destroy(id)
