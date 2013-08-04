@@ -14,10 +14,10 @@ module.exports = {
   	name: 'string',
   	description: 'string',
 	createdby: 'string',
-	editors: 'object',
-	admins: 'object' ,
-	viewers: 'object',
-	misc: 'object'
+	editors: 'json',
+	admins: 'json' ,
+	viewers: 'json',
+	misc: 'json'
     
   }
 
