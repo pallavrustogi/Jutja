@@ -1,0 +1,40 @@
+{
+	"name": "root",
+	"size": 200,
+	"children": [
+		{
+			"name": "child1",
+			"size": 150,
+			"children": [
+				{
+					"name":"child11",
+					"size": 100,
+					"children":[
+						{
+							"name": "child1",
+							"size": 75
+						}
+						
+					]
+				},
+				{
+					"name": "child2",
+					"size": 100
+				},
+				{
+					"name": "child2",
+					"size": 100
+				},
+				{
+					"name": "child2",
+					"size": 100
+				}
+			]
+
+		},
+		{
+			"name": "child2",
+			"size": 90
+		}
+	]
+}
