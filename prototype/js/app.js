@@ -118,7 +118,14 @@
 			description: "This is the description",
 			children: [{
 				label: "task1",
-				description: "This is the description 1"
+				description: "This is the description 1",
+				children: [{
+					label: "task11",
+					description: "This is the description 1"
+				},{
+					label: "task12",
+					description: "This is the description 1"
+				}]
 			},{
 				label: "task2",
 				description: "This is the description 2"

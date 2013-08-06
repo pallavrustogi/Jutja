@@ -46,8 +46,8 @@ module.exports.adapters = {
     module   : 'sails-mongo',
     host     : 'localhost',
     port     : '27017',
-    user     : 'username',
-    password : 'password',
-    database : 'local'
+    user     : 'gladon',
+    password : 'gladon',
+    database : 'test'
   }
 };

@@ -5,7 +5,7 @@
  * @description	:: Contains logic for handling requests.
  */
 
-module.exports = {
+ module.exports = {
 
   /* e.g.
   sayHello: function (req, res) {

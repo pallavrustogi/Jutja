@@ -11,7 +11,7 @@ module.exports = {
   attributes: {
   	
   	
-  	username: 'string',
+  username: 'string',
 	creator: 'object',
 	admin: 'object',
 	editor: 'object',

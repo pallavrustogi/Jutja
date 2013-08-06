@@ -50,15 +50,15 @@ var SessionController = {
         // Hash the password
         bcrypt.genSalt(10, function(err, salt) {
             if (err) return res.send('An error occured', 500);
-            bcrypt.hash(password, salt, function(err, hash) {
+            bcrypt.hash(password, salt,null, function(err, hash) {
                 if (err) return res.send('An error occured', 500);
 
                 // Save user to the database
                 User.create({
-                   username: username,
-                   password: hash
-                }).exec(function(err, user){
-                    if (err) return res.send('An error occured', 500);
+                 username: username,
+                 password: hash
+             }).exec(function(err, user){
+                if (err) return res.send('An error occured', 500);
 
                     // TODO: add email verification process
                     req.session.authenticated = true;
@@ -68,7 +68,7 @@ var SessionController = {
                     return res.redirect('/');
                 })
 
-            });
+         });
         });
     }
 };
