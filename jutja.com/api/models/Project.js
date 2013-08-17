@@ -10,9 +10,19 @@ module.exports = {
 
   attributes: {
   	
-  	name: 'string',
-  	description: 'string',
-	nodes: 'json'
+  	name: {
+	    type: 'string',
+	    required: true
+	},
+
+  	description: {
+	   type:  'string',
+	   required: true
+	    },
+	nodes: 'json',
+        owner: 'array',
+        viewer: 'array',
+        editor: 'array'
   }
 
 };
