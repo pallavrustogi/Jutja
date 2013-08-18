@@ -3,7 +3,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Force-Directed Graph</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
   <style type="text/css">
 
 
@@ -22,10 +26,20 @@
     stroke-width: 1.5px;
   }
 
+
+
+
   </style>
 </head>
 <body>
   <div id="chart"></div>
+  <ul class="dropdown-menu" id="node-context-menu">
+    <li><a>Create child task</a></li>
+    <li><a>Option 2</a></li>
+    <li><a>Option 3</a></li>
+    <li><a>Option 4</a></li>
+  </ul>
+
   <script type="text/javascript">
 
   window.app = {}
@@ -101,7 +115,22 @@ var node,
   .attr("class", "node")
   .on("dblclick", click)
   .on("click",addChild)
+  .on("contextmenu",openNodeContextMenu)
   .call(force.drag);
+
+  function openNodeContextMenu (data, index){
+    d3.select('#node-context-menu')
+      .style('position', 'absolute')
+      .style('left', d3.event.layerX + "px")
+      .style('top', d3.event.layerY + "px")
+      .style('display', 'block');
+    d3.event.preventDefault();
+  }
+
+  $('#node-context-menu').mouseleave(function(e){
+    $(this).hide();
+  });
+ 
 
   // Enter any new nodes.
   // node.enter().append("svg:circle")
@@ -144,8 +173,17 @@ function tick() {
       .attr("x2", function(d) { return d.target.x; })
       .attr("y2", function(d) { return d.target.y; });
 
-  rect.attr("x", function(d) {return d.x-(d.size/4); })
-      .attr("y", function(d) { return d.y-app.constants.NODE_HEIGHT/2; })
+  rect.attr("x", function(d) {   
+        d.x = Math.min(app.constants.SVG_WIDTH, d.x);
+        return d.x-(d.size/4);
+      })
+      .attr("y", function(d) {
+        d.y = Math.min(app.constants.SVG_HEIGHT, d.y);
+        return d.y-app.constants.NODE_HEIGHT/2;
+      }); 
+
+  // rect.attr("x", function(d) {return d.x-(d.size/4); })
+  //     .attr("y", function(d) { return d.y-app.constants.NODE_HEIGHT/2; })
 
   text.attr("x", function(d) {return d.x; })
       .attr("y", function(d) { return d.y; })
@@ -195,6 +233,8 @@ function flatten(root) {
   recurse(root);
   return nodes;
 }
+
+
 svg = vis;
 </script>
 </body>
