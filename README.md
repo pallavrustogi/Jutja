@@ -12,6 +12,8 @@ Facebook Group: https://www.facebook.com/groups/137305376468384/?fref=ts
 
 Facebook Page : https://www.facebook.com/Jutja
 
+Google Plus   : https://plus.google.com/u/0/109049906462457335753
+
 Trello        : https://trello.com/b/iaOfF8vI/jutja
 
 Google Group  : https://groups.google.com/forum/?hl=en#!forum/shbhlabh
