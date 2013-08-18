@@ -25,7 +25,7 @@ var SessionController = {
             // Compare the passwords
             bcrypt.compare(password, user.password, function(err, valid) {
                 if(err || !valid)
-                    return res.send('Invalid  password combination!', 500)
+                    return res.send('Invalid password combination!', 500)
 
                 // The user has authenticated successfully, set their session
                 req.session.authenticated = true;
@@ -41,7 +41,7 @@ var SessionController = {
 
         
                 req.session.authenticated = false;
-                //req.session.User = Null; currently the user variable is not reset 
+                //req.session.User = Null; currently the user variable is not reset
 
                 // Redirect to homepage
                 return res.redirect('/');
@@ -61,15 +61,15 @@ var SessionController = {
         // Hash the password
         bcrypt.genSalt(10, function(err, salt) {
             if (err) return res.send('An error occured', 500);
-            bcrypt.hash(password, salt,null, function(err, hash) {
+            bcrypt.hash(password, salt, function(err, hash) {
                 if (err) return res.send('An error occured', 500);
 
                 // Save user to the database
                 User.create({
-                 username: username,
-                 password: hash
-             }).exec(function(err, user){
-                if (err) return res.send('An error occured', 500);
+                   username: username,
+                   password: hash
+                }).exec(function(err, user){
+                    if (err) return res.send('An error occured', 500);
 
                     // TODO: add email verification process
                     req.session.authenticated = true;
@@ -79,7 +79,7 @@ var SessionController = {
                     return res.redirect('/');
                 })
 
-         });
+            });
         });
     }
 };
