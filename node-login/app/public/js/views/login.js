@@ -3,28 +3,40 @@ $(document).ready(function(){
 	
 	var lv = new LoginValidator();
 	var lc = new LoginController();
+	//var av = new AccountValidator();
+	//var hc = new HomeController();
 
 // main login form //
 
-	$('#login-form').ajaxForm({
+	$('#login-form1').ajaxForm({
 		beforeSubmit : function(formData, jqForm, options){
+			console.log('beforeSubmit in login.js');
 			if (lv.validateForm() == false){
+				//console.log('form invalid');
 				return false;
 			} 	else{
 			// append 'remember-me' option to formData to write local cookie //
-				formData.push({name:'remember-me', value:$("input:checkbox:checked").length == 1})
+				//formData.push({name:'remember-me', value:$("input:checkbox:checked").length == 1})
+				var queryString = $.param(formData);
+				//alert('About to submit: \n\n' + queryString);
+				//console.log('form valid',queryString);
+
 				return true;
 			}
 		},
 		success	: function(responseText, status, xhr, $form){
-			if (status == 'success') window.location.href = '/home';
+			//console.log('success in login.js');
+			if (status == 'success') lv.showLoginError('Thank You', 'Thank you for subscribing.');
+			else lv.showLoginError('Thank You', 'something went wrong');
 		},
 		error : function(e){
-            lv.showLoginError('Login Failure', 'Please check your username and/or password');
+			if (e.responseText == 'email-taken'){
+			    lv.showLoginError('Already Registered', 'You are already registered with us');
+			}
 		}
 	}); 
 	$('#user-tf').focus();
-	
+	$('#btn-login').html('Submit');
 // login retrieval form via email //
 	
 	var ev = new EmailValidator();

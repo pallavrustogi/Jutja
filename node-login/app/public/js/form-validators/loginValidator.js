@@ -12,18 +12,31 @@ function LoginValidator(){
 		$('.modal-alert .modal-body p').text(m);
 		this.loginErrors.modal('show');
 	}
+	this.validateEmail = function(e)
+	{
+		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(e);
+	}
 
 }
 
+
+
 LoginValidator.prototype.validateForm = function()
 {
+	console.log('LoginValidator in loginValidator.js');
 	if ($('#user-tf').val() == ''){
 		this.showLoginError('Whoops!', 'Please enter a valid username');
 		return false;
-	}	else if ($('#pass-tf').val() == ''){
-		this.showLoginError('Whoops!', 'Please enter a valid password');
+	}	else if ($('#email-tf').val() == ''){
+		this.showLoginError('Whoops!', 'Please enter a valid email');
 		return false;
-	}	else{
+	}	else if (this.validateEmail($('#email-tf').val())==false){
+			this.showLoginError('Whoops!', 'Please enter a valid email');
+		return false;
+	}
+		else{
+		
 		return true;
 	}
 }

@@ -9,11 +9,13 @@ module.exports = function(app) {
 
 	app.get('/', function(req, res){
 	// check if the user's credentials are saved in a cookie //
-		if (req.cookies.user == undefined || req.cookies.pass == undefined){
-			res.render('login', { title: 'Hello - Please Login To Your Account' });
-		}	else{
+		//if (req.cookies.user == undefined || req.cookies.pass == undefined){
+			console.log('appget in router.js');
+			res.render('login', { title: 'Hello' });
+
+		//}	else{
 	// attempt automatic login //
-			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
+			/*AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
 				if (o != null){
 				    req.session.user = o;
 					res.redirect('/home');
@@ -21,20 +23,35 @@ module.exports = function(app) {
 					res.render('login', { title: 'Hello - Please Login To Your Account' });
 				}
 			});
-		}
+		}*/
 	});
 	
 	app.post('/', function(req, res){
-		AM.manualLogin(req.param('user'), req.param('pass'), function(e, o){
+		//console.log('appPost in router.js');
+		/*AM.manualLogin(req.param('user'), req.param('email'), function(e, o){
 			if (!o){
 				res.send(e, 400);
 			}	else{
 			    req.session.user = o;
-				if (req.param('remember-me') == 'true'){
-					res.cookie('user', o.user, { maxAge: 900000 });
-					res.cookie('pass', o.pass, { maxAge: 900000 });
-				}
+				//if (req.param('remember-me') == 'true'){
+				//	res.cookie('user', o.user, { maxAge: 900000 });
+				//	res.cookie('pass', o.pass, { maxAge: 900000 });
+				//}
 				res.send(o, 200);
+			}
+		});*/
+		console.log('appPost in router.js',req.param('email'));
+		AM.manualLogin({
+			//name 	: req.param('name'),
+			email 	: req.param('email'),
+			user 	: req.param('user'),
+			//pass	: req.param('pass'),
+			//country : req.param('country')
+		}, function(e){
+			if (e){
+				res.send(e, 400);
+			}	else{
+				res.send('ok', 200);
 			}
 		});
 	});
