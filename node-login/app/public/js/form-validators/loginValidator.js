@@ -24,7 +24,7 @@ function LoginValidator(){
 
 LoginValidator.prototype.validateForm = function()
 {
-	console.log('LoginValidator in loginValidator.js');
+	//console.log('LoginValidator in loginValidator.js');
 	if ($('#user-tf').val() == ''){
 		this.showLoginError('Whoops!', 'Please enter a valid username');
 		return false;

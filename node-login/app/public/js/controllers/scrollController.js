@@ -28,11 +28,11 @@ $(function () {
     });
     
 	// BigVideo Setup
-    var BV = new $.BigVideo({useFlashForFirefox:false});
-	BV.init();
+    //var BV = new $.BigVideo({useFlashForFirefox:false});
+	//BV.init();
     //if (Modernizr.touch) {
     	// fallback image for mobile devices
-        BV.show('assets/img/try1.jpg');
+      //  BV.show('assets/img/try1.jpg');
     //} else {
     //    BV.show('assets/img/bg2.jpg',
     //    {ambient:true, doLoop:true, altSource:'assets/video/frontier.ogv'});

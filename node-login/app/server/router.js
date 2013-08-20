@@ -40,7 +40,7 @@ module.exports = function(app) {
 				res.send(o, 200);
 			}
 		});*/
-		console.log('appPost in router.js',req.param('email'));
+		//console.log('appPost in router.js',req.param('email'));
 		AM.manualLogin({
 			//name 	: req.param('name'),
 			email 	: req.param('email'),

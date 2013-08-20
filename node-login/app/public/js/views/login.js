@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$('#login-form1').ajaxForm({
 		beforeSubmit : function(formData, jqForm, options){
-			console.log('beforeSubmit in login.js');
+			//console.log('beforeSubmit in login.js');
 			if (lv.validateForm() == false){
 				//console.log('form invalid');
 				return false;
