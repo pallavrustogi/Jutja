@@ -3,8 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Force-Directed Graph</title>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vendor/d3.v2.js"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -113,8 +113,7 @@ var node,
   .enter()
   .append("g")
   .attr("class", "node")
-  .on("dblclick", click)
-  .on("click",addChild)
+  .on("dblclick", addChild)
   .on("contextmenu",openNodeContextMenu)
   .call(force.drag);
 
