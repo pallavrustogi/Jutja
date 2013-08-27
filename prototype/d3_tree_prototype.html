@@ -113,7 +113,8 @@ var node,
   .enter()
   .append("g")
   .attr("class", "node")
-  .on("click", addChild)
+  .on("dbclick", addChild)
+  .on("click",selectNode)
   .on("contextmenu",openNodeContextMenu)
   .call(force.drag);
 
@@ -208,7 +209,6 @@ function click(d) {
 function addChild(d){
   if(!d.children){
     d.children = [];
-    
   }
   d.children.push({
     name : "test",
@@ -217,6 +217,15 @@ function addChild(d){
     y: d.y
   });
   update();
+}
+
+
+function selectNode(d){
+  var currentRect = d3.select(this).select('rect');
+  rect.style('stroke','')
+    .style('stroke-width','');
+  currentRect.style('stroke','red')
+    .style('stroke-width','2px');
 }
 
 // Returns a list of all nodes under the root.
