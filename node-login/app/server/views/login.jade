@@ -2,34 +2,165 @@
 extends layout
 
 block content
-	#login-container
-		form( method="post")#login-form.well.span4
-			h1 Hello!
-			p.subheading Please Login To Your Account
-			label Username 
-			input(type="text", name="user", id='user-tf').span4.required
-			label Password
-			input(type="password", name="pass", id='pass-tf').span4.required
-			button(type="submit")#btn-login.btn.btn-primary
-				i.icon-lock.icon-white
-				| Sign in
-			label#remember-me.checkbox Remember Me
-				input(type="checkbox", checked='checked')
-			div.clear-fix
-			hr
-			div.btm-links
-				a(href='#')#forgot-password Forgot Your Password?
-				a(href='/signup')#create-account Create An Account
+    .navbar.navbar-fixed-top
+        .navbar-inner
+            .container
+               a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+                 span.icon-bar
+                 span.icon-bar
+                 span.icon-bar
+               a.brand.scroller(data-section='html', href='#')
+               .nav-collapse.collapse
+                 ul.nav.pull-right
+                   li
+                     a.scroller(href='#') Getting Started
+                   li
+                     a.scroller(href='#about', data-section='#about') About
+                   li
+                     a.scroller(href='#team', data-section='#team') The Team
+                   li
+                     a.scroller(href='#contact', data-section='#contact') Contact Us
+                   
+          
+          
+    .main-container
+        #intro.container-fluid
+            .container
+               .row.span6.center
+                 h1 Fastest & Intutive way to manage project
+                 p
+                   | Now never worry more about missing features. You need it? We have it.
+                   h2 Coming Soon
+                   a.btn.btn-xlarge.btn-purple(href='#contact') Sign Up
 
-	include modals/alert
-	include modals/lost-password
+
+           
+        #about.container-fluid
+            .container.light
+               h1 What can we offer
+               ul.thumbnails
+                 li.span4
+                   .thumbnail
+                     img(alt='', src='assets/img/icon1.png', height='222', width='136')
+                     h3 Mind mapped tasks
+                     p
+                       | Easy to create hierarchy
+                 li.span4
+                   .thumbnail
+                     img(alt='', src='assets/img/icon2.png', height='222', width='136')
+                     h3 Win-Win
+                     p
+                       | Head you win, Tails you win
+                 li.span4
+                   .thumbnail
+                     img(alt='', src='assets/img/icon3.png', height='222', width='136')
+                     h3 Cutting Edge Technology
+                     p
+                       | Forget the old tools. Use the best, forget the rest.
+                     br
+                     br
+                     br
+                     br
+                     br
+                     br
+
+                     
+                     
+                     
+                     
+           
+        #team.container-fluid
+            .container.dark
+               h1 Meet the team
+               ul.thumbnails
+                 li.span3
+                   .thumbnail
+                     img(alt='', src='assets/img/bhanu.png', height='212', width='213')
+                     h3 Bhanu Chaudary
+                     p
+                       | Master Mind, IITK
+                     .social
+                       a(href='https://www.linkedin.com/pub/bhanu-chaudhary/50/249/423', target='_blank')
+                         img(alt='', src='assets/img/linkedin.png')
+                       a(href='https://twitter.com/bhanu421', target='_blank')
+                         img(alt='', src='assets/img/twitter.png')
+                       a(href='https://www.facebook.com/bhanu.pratap.731572', target='_blank')
+                         img(alt='', src='assets/img/facebook.png')
+                       a(href='mailto:bhanu423@gmail.com', target='_blank')
+                         img(alt='', src='assets/img/email.png')
+                 li.span3
+                   .thumbnail
+                     img(alt='', src='assets/img/pallav.png', height='212', width='213')
+                     h3 Pallav Rustogi
+                     p
+                       | Project Manager, USC
+                     .social
+                       a(href='https://www.linkedin.com/in/pallavrustogi/', target='_blank')
+                         img(alt='', src='assets/img/linkedin.png')
+                       a(href='https://twitter.com/pallav_rus', target='_blank')
+                         img(alt='', src='assets/img/twitter.png')
+                       a(href='https://www.facebook.com/pallav.rustogi', target='_blank')
+                         img(alt='', src='assets/img/facebook.png')
+                       a(href='mailto:pallav.rustogi@gmail.com', target='_blank')
+                         img(alt='', src='assets/img/email.png')
+                 li.span3
+                   .thumbnail
+                     img(alt='', src='assets/img/gladon.png', height='213', width='213')
+                     h3 Gladon Almeda
+                     p
+                       | Front End Engineer, USC
+                     .social
+                       a(href='https://www.linkedin.com/in/gladon', target='_blank')
+                         img(alt='', src='assets/img/linkedin.png')
+                       a(href='https://twitter.com/gladonalmeida', target='_blank')
+                         img(alt='', src='assets/img/twitter.png')
+                       a(href='https://www.facebook.com/gladon', target='_blank')
+                         img(alt='', src='assets/img/facebook.png')
+                       a(href='mailto:gladon.almeida@gmail.com', target='_blank')
+                         img(alt='', src='assets/img/email.png')
+           
+        #contact.container-fluid
+            .container.dark
+                 h1 Get in contact with us
+                 
+                 .span4
+                   #login-form
+                    form( method="post")#login-form1
+                        h3 Hello!
+                        p Sign up and we will tell you when we are ready
+                          br
+                          br
+                          label Name 
+                          input(type="text", name="user", id='user-tf').span4.required
+                          label Email
+                          input(type="text", name="email", id='email-tf').span4.required
+                          button(type="submit", name="submit", style="text-align:center;")
+                            | Register
+                 .span2
+                   p                                           
+                 .span4
+                  h3 Email us
+                  p
+                   | We are highly responsive to emails
+                   address
+                   
+                  address
+                  strong Support
+                  br
+                  a(href='mailto:support@jutja.com') support [at] jutja [dot] com
+            br
+            br
+            br
+            
+        include modals/alert
 
 block scripts
-	script(src='/vendor/jquery.min.js')
-	script(src='/vendor/jquery.form.js')
-	script(src='/vendor/bootstrap-modal.js')
-	script(src='/vendor/bootstrap-transition.js')
-	script(src='/js/views/login.js')
-	script(src='/js/controllers/loginController.js')
-	script(src='/js/form-validators/loginValidator.js')
-	script(src='/js/form-validators/emailValidator.js')
+    script(src='/vendor/jquery.min.js')
+    script(src='/vendor/jquery.form.js')
+    script(src='/vendor/bootstrap-modal.js')
+    script(src='/vendor/bootstrap-transition.js')
+    script(src='/js/views/login.js')
+    script(src='/js/controllers/loginController.js')
+    script(src='/js/controllers/scrollController.js')
+    script(src='/js/form-validators/loginValidator.js')
+    script(src='/js/form-validators/emailValidator.js')

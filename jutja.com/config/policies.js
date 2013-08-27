@@ -16,12 +16,16 @@ module.exports.policies = {
   // (`true` allows public access) 
   '*': 'authenticated',
  
-  // whitelist the auth controller
+  // Controller for session controller which manages the signup and login
 	SessionController :
 	{
 		'*': true
 	},
-
+// Controller to set the owner ,
+	ProjectController :
+	{
+		'create': 'set_owner'
+	},
   /*
 	// Here's an example of adding some policies to a controller
 	RabbitController: {

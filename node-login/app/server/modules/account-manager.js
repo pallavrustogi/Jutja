@@ -33,22 +33,23 @@ exports.autoLogin = function(user, pass, callback)
 	});
 }
 
-exports.manualLogin = function(user, pass, callback)
+exports.manualLogin = function(newData, callback)
 {
-	accounts.findOne({user:user}, function(e, o) {
-		if (o == null){
-			callback('user-not-found');
+	//console.log('manual login in account-manager.js');
+	accounts.findOne({email:newData.email}, function(e, o) {
+		if (o){
+			callback('email-taken');
+		//	console.log('email dup in account-manager.js');
 		}	else{
-			validatePassword(pass, o.pass, function(err, res) {
-				if (res){
-					callback(null, o);
-				}	else{
-					callback('invalid-password');
-				}
-			});
-		}
-	});
+			
+						newData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+						accounts.insert(newData, {safe: true}, callback);
+					//	console.log('data inserted in account-manager.js');
+				}			
+		});
 }
+	
+
 
 /* record insertion, update & deletion methods */
 
