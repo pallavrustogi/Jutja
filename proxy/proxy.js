@@ -8,8 +8,11 @@ var options = {
     hostnameOnly: true,
     router: {
 	'jutja.com': 'localhost:8000',
-	'www.jutja.com': '192.241.167.176:8000'
-//	'alpha.jutja.com': '192.241.167.176:9002'
+	'www.jutja.com': '192.241.167.176:8000',
+	'dev.jutja.com': '192.241.167.176:5000',
+	'www.dev.jutja.com': '192.241.167.176:5000',
+	'alpha.jutja.com': '192.241.167.176:4000'
+
     }
 }
 
