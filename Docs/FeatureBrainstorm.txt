@@ -1,0 +1,107 @@
+﻿List of features
+Here is the list of features that we would like to have. We can make changes to its priority. For now I am just dumping the list as i collect them. We can add/delete/modify these features
+
+
+1) Single page project management
+2) Project Name and description
+3) Discussions and decisions
+4) To-do List/tasks with color coded status
+5) Repository for keeping files and images
+6) Idea page with voting feature
+7) Multiple projects per user
+8) Scheduler and calendar for individuals. Meeting time suggester
+9) Possible integration with github?
+10) Rewind feature something similar to https://basecamp.com/get-caught-up or something like facebook timeline?
+11) Logs
+12) Access Control
+13) Grant/revoke  permissions to view/edit
+14) Email reminders/Notifications
+15) Fault tolerance (what happens when browser/internet connection crash, accidentally deleted something, recovery)
+16) Search the repo
+17) collabedit
+18) Mobile integration
+19) Gantt Chart
+20) One click Reports/project status
+
+
+
+
+Project management (http://www.teamworkpm.net/features-manageProjects)
+* All activity on tasks & Task Lists.
+* Upcoming milestones.
+* New comments and messages.
+* Easily exportable to other formats.
+* Automatically creates the tabs that apply to you.
+* Keep team informed with announcements.
+* Clean, intuitive design and layout.
+* Drag-drop to Change tasks & milestones
+* Drag-drop reordering of tasks and lists
+* Automatic calculation of task list progress
+* Quickly assign tasks & milestones to users
+* Create and edit dependencies quickly                 
+Task management
+* Due dates on tasks
+* Start dates on tasks
+* Add estimated completion time to each task
+* Assign tasks to one or several people.
+* Attach files and comments to a task.
+* Set task priority and percentage complete
+* Create task reminders
+* Log time against a task.
+* Notify people about a task.
+* Email your tasks to a project
+* Keep tasks private to individuals
+* Custom Task Views - easily see which tasks have been assigned to you and other project members.
+* Easily drag and drop Tasks and Task lists into the order you want.
+* Move Tasks between Task Lists.
+* Free up your time by creating Task List Templates
+* The Quick Add Tool makes adding multiple tasks easy and fast.
+* Edit dates or reassign whole task lists.
+* Generate Custom Task Reports.
+* Make tasks private.
+* Create sub-tasks.
+* Quickly create recurring tasks.
+* Pick an end date if there is one.
+* Quick preview of dates.
+* Pick from a range of schedule options, eg weekly, monthly etc
+* Hover over tasks for extra details
+* Keep tasks private to individuals.
+* Allow tasks to only be seen by select project members.
+* Set the privacy on tasks so only one 3rd party company on a project can see them.
+* Due dates on sub-tasks
+* Start dates on sub-tasks
+* Assign tasks to one or several people.
+* Attach files and comments to a sub-task.
+* Manage sub-tasks on the go with our IOS apps
+* Log time against a sub-task.
+* Notify people about a sub-task.
+* Keep sub-tasks private to individuals
+
+
+Milestone
+* Late milestones
+* Upcoming milestones
+* Completed milestones
+* Easily viewable in Project View.
+* The responsibility of a particular person or multiple people.
+* Clearly displayed on calendar.
+* Ability to make private, internal milestones.
+* Milestone creation notifications.
+* Add multiple milestones in one go
+* SMS and email reminders
+
+
+Privacy
+* Keep tasks private to individuals.
+* Allow tasks to only be seen by select project members.
+* Set the privacy on tasks so only one 3rd party company on a project can see them.
+* Keep messages private to individual project members.
+* Send a private group message to a select company working on a project.
+* Keep a message private to select users across a range of companies working on a project                 
+* Keep file private to individual project members.
+* Files attached to private messages will automatically inherit the same privacy settings
+* Make a file private to select users across a range of companies working on a project                 
+* Ability to choose who can view the notebook.
+* Ability to leave private comments.
+* Easily and quickly adjust the privacy setting with a few clicks.
+* Intuitive interface makes setting the privacy child's play.

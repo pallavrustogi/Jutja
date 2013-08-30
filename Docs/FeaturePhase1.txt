@@ -1,0 +1,16 @@
+List of features discussed for phase 1
+1) Ability to Signup, Login and Logout
+2) Add, Delete, Modify Team members/Owners
+3) Create Project
+4) Create Task and Subtask
+5) Visbility Control
+6) Color coding & Status Calculations. 
+7) Ease of use by keyboard shortcuts
+8) Drill Down on nodes for more details
+9) Adjustable tree size. Collapase and expand various projects and tasks
+10) Emails
+11) Notifications
+12) Control Pannel
+13) Right Click Menu
+14) Chat/Message/Realtime collab (Optional/least preferance in Phase 1)
+ 
