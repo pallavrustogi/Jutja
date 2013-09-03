@@ -1,6 +1,11 @@
-# jutja.com
+# node-loco-skeleton
 
+This project aims to be a fairly simple skeleton project built on top of the [Locomotive](http://locomotivejs.org/) framework for Node.js.
+It's mostly a learning exercise as I play around with Node, but maybe someone will find it useful.
+I couldn't find a good starting project that already included a template engine, user authentication, and other things that most dynamic Web apps need.
 
+I'm trying to make some effort to give a fairly complete starting point, so a lot of my opinions have been injected on structure and library choice have been injected along the way.
+But if you like my opinions, then this might be a good starting point for you :)
 
 To get started, you'll need a working copy of [MongoDB](http://www.mongodb.org/).
 By default, the app will connect to a database named `test` on `localhost`, but you can change this by editing [`config/environments/development.js`](https://github.com/michaelmior/node-loco-skeleton/blob/master/config/environments/development.js).
@@ -11,6 +16,7 @@ Once MongoDB is up and running, the following should suffice after cloning the r
 
 Test coverage is currently very minimal, but more tests are in the works. You can run tests with `npm test`.
 
+[![build status](https://secure.travis-ci.org/michaelmior/node-loco-skeleton.png)](http://travis-ci.org/michaelmior/node-loco-skeleton)
 
 ## Linting
 
