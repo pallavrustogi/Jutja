@@ -53,8 +53,8 @@ App.Views.NodeGraph = Backbone.View.extend({
 	  	.enter()
 	  	.append("g")
 	  	.attr("class", "node")
-	  	.on("dbclick", this.selectNode)
-	  	.on("click",this.addChild)
+	  	.on("dblclick", this.addChild)
+	  	.on("click",this.selectNode)
 	  	.on("contextmenu",this.openNodeContextMenu);
 
 
@@ -102,6 +102,7 @@ App.Views.NodeGraph = Backbone.View.extend({
 
 	// Toggle children on click.
 	click : function(d) {
+
 		if (d.children) {
 			d._children = d.children;
 			d.children = null;
@@ -110,14 +111,6 @@ App.Views.NodeGraph = Backbone.View.extend({
 			d._children = null;
 		}
 		this.update();
-	},
-
-	selectNode : function(d){
-		var currentRect = d3.select(this).select('rect');
-		rect.style('stroke','')
-		.style('stroke-width','');
-		currentRect.style('stroke','red')
-		.style('stroke-width','2px');
 	},
 
 	render : function(){
@@ -186,6 +179,10 @@ App.Views.NodeGraph = Backbone.View.extend({
 		});
 
 		this.addChild = function (d){
+			if(that.dblclickTimer){
+				clearTimeout(that.dblclickTimer);
+				that.dblclickTimer = null;
+			}
 	  		if(!d.children){
 	  			d.children = [];
 	  		}
@@ -196,6 +193,20 @@ App.Views.NodeGraph = Backbone.View.extend({
 	  			y: d.y
 	  		});
 	  		that.update();
+	  	}
+
+	  	this.selectNode = function(d){
+	  		var svgElement = this;
+	  		that.dblclickTimer = setTimeout(function(){
+	  			if(that.dblclickTimer === null){
+	  				return;
+	  			}
+	  			var currentRect = d3.select(svgElement).select('rect');
+	  			that.rect.style('stroke','')
+	  				.style('stroke-width','');
+	  			currentRect.style('stroke','red')
+	  				.style('stroke-width','2px');
+	  		},100);
 	  	}
 
 		return this;
