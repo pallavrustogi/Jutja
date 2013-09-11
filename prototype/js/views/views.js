@@ -58,6 +58,10 @@ App.Views.NodeGraph = Backbone.View.extend({
 	  	.on("contextmenu",this.openNodeContextMenu);
 
 
+	  	d3.select("body")
+	  	.on("keydown",this.keydown);
+
+
 	  	this.node.append("svg:rect")
 	  	.attr("width", function(d) { return d.size/2 })
 	  	.attr("height", that.constants.NODE_HEIGHT)
@@ -203,10 +207,24 @@ App.Views.NodeGraph = Backbone.View.extend({
 	  			}
 	  			var currentRect = d3.select(svgElement).select('rect');
 	  			that.rect.style('stroke','')
-	  				.style('stroke-width','');
+	  				.style('stroke-width','')
+	  				.attr('data-selected',false);
 	  			currentRect.style('stroke','red')
-	  				.style('stroke-width','2px');
+	  				.style('stroke-width','2px')
+	  				.attr('data-selected',true);  				
 	  		},100);
+	  	}
+
+	  	this.keydown = function(){
+	  		//Enter key event
+	  		if(d3.event.keyCode==13){
+	  			d3.event.preventDefault();
+	  			var rectSelected = d3.selectAll('rect[data-selected=true]'),
+	  				data = rectSelected.data();
+				if(data){
+					that.addChild(data[0]);
+				}
+	  		}
 	  	}
 
 		return this;
