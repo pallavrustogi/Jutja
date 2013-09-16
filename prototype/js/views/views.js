@@ -65,26 +65,32 @@ App.Views.NodeGraph = Backbone.View.extend({
 	  	this.node.append("svg:rect")
 	  	.attr("width", function(d) { return d.size/2 })
 	  	.attr("height", that.constants.NODE_HEIGHT)
-	  	.attr("x", function(d) { return d.x-(d.size/4); })
+	  	.attr("x", function(d) { return d.x; })
 	  	.attr("y", function(d) { return d.y-that.constants.NODE_HEIGHT/2; })
 	  	.style("fill", this.color);
 
-
 	  	this.rect = vis.selectAll(".node rect");
-	  	
+		
 	  	this.node.append("text")
-	  	.attr("dx", 12)
+	  	.attr("dx", 0)
 	  	.attr("dy", ".35em")
 	  	.text(function(d) { return d.name })
 	  	.attr("x", function(d) { return d.x; })
 	  	.attr("y", function(d) { return d.y; })
 	  	.attr("class","title")
-	  	.attr("text-anchor","middle");
+	    .attr("text-anchor","middle");
+	  	
 
 	  	this.text = vis.selectAll(".node text.title");
-
-
-	  	this.node.call(this.force.drag);
+		
+		that.rect.attr("x", function(d,i) {
+				x = Math.min(that.constants.SVG_WIDTH, (that.text[0][i].getBBox().x - 5));
+				return x;})
+			.attr("width", function(d,i) {
+				w = Math.min(that.constants.SVG_WIDTH, (that.text[0][i].getBBox().width + 10));
+				return w;})
+	  			
+		this.node.call(this.force.drag);
 	},
 	// Returns a list of all nodes under the root.
 	flatten : function(root) {
@@ -139,17 +145,20 @@ App.Views.NodeGraph = Backbone.View.extend({
 			.attr("x2", function(d) { return d.target.x; })
 			.attr("y2", function(d) { return d.target.y; });
 
-			that.rect.attr("x", function(d) {
-				d.x = Math.min(that.constants.SVG_WIDTH, d.x);
-				return d.x-(d.size/4);
-			})
-			.attr("y", function(d) {
+			that.rect.attr("y", function(d) {
 				d.y = Math.min(that.constants.SVG_HEIGHT, d.y);
 				return d.y-that.constants.NODE_HEIGHT/2;
 			}); 
-
+			
 			that.text.attr("x", function(d) {return d.x; })
 			.attr("y", function(d) { return d.y; })
+			
+			that.rect.attr("x", function(d,i) {
+				x = Math.min(that.constants.SVG_WIDTH, (that.text[0][i].getBBox().x - 5));
+				return x;})
+			.attr("width", function(d,i) {
+				w = Math.min(that.constants.SVG_WIDTH, (that.text[0][i].getBBox().width + 10));
+				return w;})
 		}
 
 		force = d3.layout.force()
