@@ -105,3 +105,12 @@ Privacy
 * Ability to leave private comments.
 * Easily and quickly adjust the privacy setting with a few clicks.
 * Intuitive interface makes setting the privacy child's play.
+
+Linked based Auto-assign Task -
+*Linked-in profile of the user will be checked giving a list of suggestions for the best fit candidate
+Cons- New recuits / Large Teams 
+Remark - This step should be totally  optional step , done only when user specifically asks for it .
+
+Client- Side Encryption -
+*With the leaks , this feature will be a remarkable add-on for our project. currently we are looking at https://github.com/chengxianga2008/node-cryptojs-aes
+for implementing this particular feature . 
