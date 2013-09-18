@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Force-Directed Graph</title>
+  <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vendor/d3.v2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <style type="text/css">
+
+
+
+
+
+  circle.node {
+    cursor: pointer;
+    stroke: #3182bd;
+    stroke-width: 1.5px;
+  }
+
+  line.link {
+    fill: none;
+    stroke: #9ecae1;
+    stroke-width: 1.5px;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div id="chart"></div>
+  <ul class="dropdown-menu" id="node-context-menu">
+    <li><a>Create child task</a></li>
+    <li><a>Option 2</a></li>
+    <li><a>Option 3</a></li>
+    <li><a>Option 4</a></li>
+  </ul>
+
+  <script type="text/javascript">
+
+  window.app = {}
+
+  app.constants = {
+    NODE_HEIGHT : 30,
+    SVG_HEIGHT : 500,
+    SVG_WIDTH : 960
+  }
+var node,
+  link,
+  root,
+  rect,
+  text;
+
+  var force = d3.layout.force()
+  .on("tick", tick)
+  .size([app.constants.SVG_WIDTH, app.constants.SVG_HEIGHT]);
+
+  force.linkDistance(function(link,index){
+    return link.source.size/5+link.target.size/5+50;
+  });
+
+  force.charge(function(node,index){
+    return -(node.size*5);
+  }).friction(0.4)
+  .gravity(0.01);
+
+
+  var vis = d3.select("#chart").append("svg:svg")
+  .attr("width", app.constants.SVG_WIDTH)
+  .attr("height", app.constants.SVG_HEIGHT);
+
+  d3.json("readme.json", function(json) {
+    root = json;
+    update();
+  });
+
+  function update() {
+    var nodes = flatten(root),
+    links = d3.layout.tree().links(nodes);
+
+  // Restart the force layout.
+  force
+  .nodes(nodes)
+  .links(links)
+  .start()
+  .linkStrength(3);
+
+
+
+
+  // Update the links…
+  link = vis.selectAll("line.link")
+  .data(links, function(d) { return d.target.id; });
+
+  // Enter any new links.
+  link.enter().insert("svg:line", ".node")
+  .attr("class", "link")
+  .attr("x1", function(d) { return d.source.x; })
+  .attr("y1", function(d) { return d.source.y; })
+  .attr("x2", function(d) { return d.target.x; })
+  .attr("y2", function(d) { return d.target.y; });
+
+  // Exit any old links.
+  link.exit().remove();
+
+  // Update the nodes…
+  node = vis.selectAll("g.node")
+  .data(nodes, function(d) { return d.id; })
+  .enter()
+  .append("g")
+  .attr("class", "node")
+  .on("dbclick", addChild)
+  .on("click",selectNode)
+  .on("contextmenu",openNodeContextMenu)
+  .call(force.drag);
+
+  function openNodeContextMenu (data, index){
+    d3.select('#node-context-menu')
+      .style('position', 'absolute')
+      .style('left', d3.event.layerX + "px")
+      .style('top', d3.event.layerY + "px")
+      .style('display', 'block');
+    d3.event.preventDefault();
+  }
+
+  $('#node-context-menu').mouseleave(function(e){
+    $(this).hide();
+  });
+ 
+
+  // Enter any new nodes.
+  // node.enter().append("svg:circle")
+  //     .attr("class", "node")
+  //     .attr("cx", function(d) { return d.x; })
+  //     .attr("cy", function(d) { return d.y; })
+  //     .attr("r", function(d) { return d.size/5 })
+  //     .style("fill", color)
+  //     .on("dblclick", click)
+  //     .on("click",addChild)
+  //     .call(force.drag);
+
+  node.append("svg:rect")
+  .attr("width", function(d) { return d.size/2 })
+  .attr("height", app.constants.NODE_HEIGHT)
+  .attr("x", function(d) { return d.x-(d.size/4); })
+  .attr("y", function(d) { return d.y-app.constants.NODE_HEIGHT/2; })
+  .style("fill", color);
+
+  rect = vis.selectAll(".node rect");
+
+  node.append("text")
+      .attr("dx", 12)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name })
+      .attr("x", function(d) { return d.x; })
+      .attr("y", function(d) { return d.y; })
+      .attr("class","title")
+      .attr("text-anchor","middle");
+
+  text = vis.selectAll(".node text.title");
+
+  // Exit any old nodes.
+  //node.exit().remove();
+}
+
+function tick() {
+  link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  rect.attr("x", function(d) {   
+        d.x = Math.min(app.constants.SVG_WIDTH, d.x);
+        return d.x-(d.size/4);
+      })
+      .attr("y", function(d) {
+        d.y = Math.min(app.constants.SVG_HEIGHT, d.y);
+        return d.y-app.constants.NODE_HEIGHT/2;
+      }); 
+
+  // rect.attr("x", function(d) {return d.x-(d.size/4); })
+  //     .attr("y", function(d) { return d.y-app.constants.NODE_HEIGHT/2; })
+
+  text.attr("x", function(d) {return d.x; })
+      .attr("y", function(d) { return d.y; })
+}
+
+// Color leaf nodes orange, and packages white or blue.
+function color(d) {
+  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update();
+}
+
+function addChild(d){
+  if(!d.children){
+    d.children = [];
+  }
+  d.children.push({
+    name : "test",
+    size : d.size * 0.8,
+    x: d.x,
+    y: d.y
+  });
+  update();
+}
+
+
+function selectNode(d){
+  var currentRect = d3.select(this).select('rect');
+  rect.style('stroke','')
+    .style('stroke-width','');
+  currentRect.style('stroke','red')
+    .style('stroke-width','2px');
+}
+
+// Returns a list of all nodes under the root.
+function flatten(root) {
+  var nodes = [], i = 0;
+
+  function recurse(node) {
+    if (node.children) node.children.forEach(recurse);
+    if (!node.id) node.id = ++i;
+    nodes.push(node);
+  }
+
+  recurse(root);
+  return nodes;
+}
+
+
+svg = vis;
+</script>
+</body>
+</html>
