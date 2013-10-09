@@ -1,23 +1,4 @@
-@import url("jquery-ui-1.10.3.custom.css");
-@import url("fullcalendar.css");
-@import url("chosen.css");
-@import url("jquery.cleditor.css");
-@import url("jquery.noty.css");
-@import url("noty_theme_default.css");
-@import url("elfinder.min.css");
-@import url("elfinder.theme.css");
-@import url("uploadify.css");
-@import url("jquery.gritter.css");
-@import url("font-awesome.min.css");
-@import url("font-awesome-ie7.min.css");
-@import url("glyphicons.css");
-@import url("halflings.css");
-@import url("dropzone.css");
-@import url("xcharts.min.css");
-@import url("jquery.easy-pie-chart.css");
-@import url(http://fonts.googleapis.com/css?family=Lato:300);
-@import url(http://fonts.googleapis.com/css?family=Lato:400);
-@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
 /*!
 * Main style sheet
 */
