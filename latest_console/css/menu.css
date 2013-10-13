@@ -970,8 +970,8 @@
 /*--- Light Colors  ---*/
 .ui.menu .green.active.item,
 .ui.green.menu .active.item {
-  border-color: #A1CF64 !important;
-  color: #A1CF64 !important;
+  border-color: #27ae60 !important;
+  color: #27ae60 !important;
 }
 .ui.menu .red.active.item,
 .ui.red.menu .active.item {
@@ -1131,10 +1131,10 @@
 }
 /*--- Inverted Colors  ---*/
 .ui.inverted.green.menu {
-  background-color: #A1CF64;
+  background-color: #27ae60;
 }
 .ui.inverted.green.pointing.menu .active.item:after {
-  background-color: #A1CF64;
+  background-color: #27ae60;
 }
 .ui.inverted.red.menu {
   background-color: #D95C5C;
