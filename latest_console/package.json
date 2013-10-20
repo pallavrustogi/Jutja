@@ -1,0 +1,28 @@
+{
+  "name": "Jutja",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+    
+  },
+  "dependencies": {
+    "async": "*",
+    "connect-mongo": "*",
+    "emailjs": "*",
+    "express": "*",
+    "findit2": "*",
+    "ejs": "*",
+    "jshint": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "passport-oauth": "*",
+    "passport-facebook": "*",
+    "passport-github": "*",
+    "passport-twitter": "*",
+    "recess": "*",
+    "uglify-js": "*"
+  }
+}
+
