@@ -1,6 +1,6 @@
 /*global Viva, $*/
 function onLoad() {
-	var data = {"nodes":[{"group":1,"children":[]},{"group":1,"children":[]},{"group":3,"children":[]}],"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":8}]};
+	var data = {"nodes":[{"group":1,"children":[]},{"group":1,"children":[]},{"group":3,"children":[]}],"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":1}]};
 	var d3Sample = function(){
          var g = Viva.Graph.graph();
         g.Name = "Jutja project graph";
@@ -64,26 +64,25 @@ function onLoad() {
         	graph.addLink(nodeId, graph.getNodesCount()-1, 1);
            
         };
-        
-        
-        
+
         svgGraphics.node(function(node){
+        	nodeSize = 18;
             var groupId = node.data.group;
-            var circle = Viva.Graph.svg('circle')
-                .attr('r', 7)
-                .attr('stroke', '#fff')
-                .attr('stroke-width', '1.5px')
+            var rectangle = Viva.Graph.svg('rect')
+                .attr("width", nodeSize)
+                .attr("height", nodeSize)
                 .attr("fill", colors[groupId ? groupId - 1 : 5]);
             
-            $(circle).click(function() { 
+            $(rectangle).click(function() { 
             	generateNewNodeOnDbClick(node.id);
             });
 
-            return circle;
+            return rectangle;
 
         }).placeNode(function(nodeUI, pos){
-            nodeUI.attr( "cx", pos.x).attr("cy", pos.y);
+        	nodeUI.attr('x', pos.x - nodeSize / 2).attr('y', pos.y - nodeSize / 2);
         });
+        
         
 
         svgGraphics.link(function(link){
