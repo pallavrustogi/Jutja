@@ -5,10 +5,9 @@
 exports = module.exports = function(app, passport) {
 	
 	app.get("/dashboard", function(req, res) {
-	//if(req.isAuthenticated()) { res.render('dashboard') }
-	//else {  res.set('X-Auth-Required', 'true');
-  //res.redirect('/login/?returnUrl='+ encodeURIComponent(req.originalUrl));
-res.render('dashboard') 
+	if(req.isAuthenticated()) { res.render('dashboard') }
+	else {  res.set('X-Auth-Required', 'true');
+  res.redirect('/login/?returnUrl='+ encodeURIComponent(req.originalUrl));
 }
 
 }); 
