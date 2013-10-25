@@ -1,9 +1,9 @@
 /*global Viva, $*/
 function onLoad() {
-     var d3Sample = function(){
-        var data = {"nodes":[{"name":"Myriel","group":1},{"name":"Napoleon","group":1},{"name":"Fameuil","group":3}],"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":8}]};
-        var g = Viva.Graph.graph();
-        g.Name = "Sample graph from d3 library";
+	var data = {"nodes":[{"group":1,"children":[]},{"group":1,"children":[]},{"group":3,"children":[]}],"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":8}]};
+	var d3Sample = function(){
+         var g = Viva.Graph.graph();
+        g.Name = "Jutja project graph";
 
         for (var i = 0; i < data.nodes.length; ++i){
             g.addNode(i, data.nodes[i]);
@@ -13,7 +13,7 @@ function onLoad() {
             var link = data.links[i];
             g.addLink(link.source, link.target, link.value);
         }
-
+        
         return g;
     };
 
@@ -32,7 +32,7 @@ function onLoad() {
 
      var example = function() {
         var graph = d3Sample();
-
+        
         var layout = Viva.Graph.Layout.forceDirected(graph, {
             springLength : 35,
             springCoeff : 0.00055,
@@ -41,17 +41,32 @@ function onLoad() {
         });
 
         var cssGraphics = Viva.Graph.View.cssGraphics();
-
+        
         cssGraphics.node(function(node){
             var nodeUI = document.createElement('div');
             nodeUI.setAttribute('class', 'node');
-            nodeUI.title = node.data.name;
+            //nodeUI.title = node.data.name;
             var groupId = node.data.group;
             nodeUI.style.background = colors[groupId ? groupId - 1 : 5];
             return nodeUI;
         });
 
         var svgGraphics = Viva.Graph.View.svgGraphics();
+        
+        // we use this method to highlight all realted links
+        // when user hovers mouse over a node:
+        generateNewNodeOnDbClick = function(nodeId) {
+        	var group = 1 + Math.floor(Math.random() * 20);
+        	newNode = {"group":group,"children":[]};
+        	data.nodes.push(newNode);
+        	graph.getNode(nodeId).data.children.push(graph.getNodesCount()-1);
+        	graph.addNode(graph.getNodesCount(), data.nodes[graph.getNodesCount()-1]);
+        	graph.addLink(nodeId, graph.getNodesCount()-1, 1);
+           
+        };
+        
+        
+        
         svgGraphics.node(function(node){
             var groupId = node.data.group;
             var circle = Viva.Graph.svg('circle')
@@ -59,14 +74,17 @@ function onLoad() {
                 .attr('stroke', '#fff')
                 .attr('stroke-width', '1.5px')
                 .attr("fill", colors[groupId ? groupId - 1 : 5]);
-
-            circle.append('title').text(node.data.name);
+            
+            $(circle).click(function() { 
+            	generateNewNodeOnDbClick(node.id);
+            });
 
             return circle;
 
         }).placeNode(function(nodeUI, pos){
             nodeUI.attr( "cx", pos.x).attr("cy", pos.y);
         });
+        
 
         svgGraphics.link(function(link){
             return Viva.Graph.svg('line')
