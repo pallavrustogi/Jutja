@@ -73,7 +73,7 @@ function onLoad() {
                 .attr("height", nodeSize)
                 .attr("fill", colors[groupId ? groupId - 1 : 5]);
             
-            $(rectangle).click(function() { 
+            $(rectangle).dblclick(function() {
             	generateNewNodeOnDbClick(node.id);
             });
 
