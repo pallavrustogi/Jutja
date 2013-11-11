@@ -1,0 +1,357 @@
+<html>
+    <head> <title>Jutja </title>
+		<script  src="/linker/js/jquery.js"></script>
+		<script  src="/linker/js/sidebar.js"></script>
+		<script src="/linker/js/timelineJS.js"></script>
+		<script>//random jobs 
+		$(document).ready(function() {
+			$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');
+		});
+		</script>
+		<link href="/linker/styles/sidebar.css" rel="stylesheet">
+		<link href="/linker/styles/menu.css" rel="stylesheet">
+		<link href="/linker/styles/button.min.css" rel="stylesheet">
+		<link href="/linker/styles/icon.min.css" rel="stylesheet">
+		<link href="/linker/styles/list.css" rel="stylesheet">
+		<link href="/linker/styles/grid.css" rel="stylesheet">
+		<link href="/linker/styles/divider.css" rel="stylesheet">
+		<link href="/linker/styles/header.css" rel="stylesheet">
+		<link href="/linker/styles/style.min.css" rel="stylesheet">
+		<style type="text/css">
+			.item.important {
+				border-left: 2px solid #FF5454;
+			}
+			.item.medium  {
+				border-left: 2px solid #6ECFF5 ;
+			}
+			.item.low  {
+				border-left: 2px solid #78CD51;
+			}
+			.override {
+				margin: 0px;
+				margin-top: 0px;
+				margin-right: 0px;
+				margin-bottom: 0px;
+				margin-left: 0px;
+			}
+		</style>
+    </head>
+    <body  class = "override">
+		<div class="ui pointing menu">
+			<a class="active item" onclick = "$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');">
+				<i class="home icon "></i> Dashboard
+			</a>
+			<a class="item">
+				<i class="mail icon"></i> Messages
+			</a>
+			<a class="item">
+				<i class="info icon"></i> Notifications
+			</a>
+		</div>
+		<div class="ui  vertical demo inverted sidebar menu">
+			<a class="item">
+				<i class="home icon"></i>
+				Jutja
+			</a>
+			<a class="item">
+				<i class="calendar icon"></i>
+				Calendar
+			</a>
+			<a class="active item">
+				<i class="time icon"></i>
+				Time-Line
+			</a>
+			<a class="item">
+				<i class="tasks icon"></i>
+				Todo
+			</a>
+		</div>
+		<div class="ui tiny launch right attached button sidebar_toggle" >
+			<i class="icon list layout"></i>
+			<!-- <span class="text" style="display: none;">Menu</span> -->
+		</div>
+        <!-- start of content -->
+		<div>
+			<!-- start of grid -->
+			<div class="two column stackable ui grid">
+				<div class="column">
+					<div class="row" >
+						<div class="ui segment">
+							<!-- start of list -->
+							<h3 class="ui  black block header">
+								Timeline
+							</h3>
+							<div class="col-sm-5">
+								<div class="graph">
+									<div class="timeline" id="allProjects">
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">appointment</span>
+													<span class="details">
+														VC in New Delhi
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>							
+											<div>
+												<input type="button" class="icon1" id="iconMin11"/>
+												<input type="button" class="icon1" id="iconMin21"/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot" id="col11" style="display:none;">
+											<div class="task" style="width:35%;margin-left:3.5%;">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Set up 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick="">
+											</div>
+											<div class="time" style="padding: 3px 8px 3px 40px;">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="clearfix"></div>
+											<div class="timeslot alt">
+												<div class="task">
+													<span>
+														<span class="type">Git updated</span>
+														<span class="details">
+															Gladon pushed new code .
+														</span>
+														<span>
+															remaining time
+															<span class="remaining">
+																3h 38m 15s
+															</span>	
+														</span>
+													</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Get a new logo 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin12"/>
+												<input type="button" class="icon1" id="iconMin22"/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot" id="col12" style="display:none;">
+											<div class="task" style="width:35%;margin-left:3.5%;">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Finalize logo 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time" style="padding: 3px 8px 3px 40px;">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">deadline</span>
+													<span class="details">
+														Work on some random feature
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">appointment</span>
+													<span class="details">
+														president of USA
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>							
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="clearfix"></div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">skype call</span>
+													<span class="details">
+														You missed a call from pallav
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span>
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Gladon has sent a global mail.
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">project deadline</span>
+													<span class="details">
+														Fix the overall layout
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">Digital Ocean </span>
+													<span class="details">
+														Finish article on geddy
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+									</div>
+									<input type="button" value="Add entry" onclick="" id="addEntry"/>	
+								</div>		
+							</div><!--/col-->	
+							
+						</div>
+					</div>
+					
+				</div> <!-- end of list -->  
+			
+			</div>
+		</div>
+	</body>
+</html>

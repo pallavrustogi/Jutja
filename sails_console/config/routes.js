@@ -34,7 +34,40 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'home/index'
-  }
+  },
+   '/login': {
+    view: 'home/login'
+  },
+  '/signup': {
+    view: 'home/signup'
+  },
+  
+  '/session/login': {
+    controller: 'SessionController',
+    action: 'login'
+  },
+  
+  '/session/logout': {
+    controller: 'SessionController',
+    action: 'logout'
+  },
+  
+  '/session/signup': {
+    controller: 'SessionController',
+    action: 'register'
+  },
+    '/dashboard': {
+    controller: 'DashboardController',
+    action: 'main'
+    },
+    '/dashboard/timeline': {
+    controller: 'DashboardController',
+    action: 'timeline'
+    },
+    '/dashboard/todo': {
+    controller: 'DashboardController',
+    action: 'todo'
+    }
 
   /*
   // But what if you want your home page to display
@@ -96,12 +129,7 @@ module.exports.routes = {
 
 
 
-/** 
- * (3) Action blueprints
- * These routes can be disabled by setting (in `config/controllers.js`):
- * `module.exports.controllers.blueprints.actions = false`
- *
- * All of your controllers ' actions are automatically bound to a route.  For example:
+/** (3) Action blueprints * * These routes can be disabled by setting( in config / controllers.js): * `module.exports.controllers.blueprints.actions = false` * * All of your controllers ' actions are automatically bound to a route.  For example:
  *   + If you have a controller, `FooController`:
  *     + its action `bar` is accessible at `/foo/bar`
  *     + its action `index` is accessible at `/foo/index`, and also `/foo`
@@ -109,7 +137,18 @@ module.exports.routes = {
 
 
 /**
- * (4) Shortcut CRUD blueprints
+ * (4) View blueprints
+ *
+ * These routes can be disabled by setting (in config/controllers.js):
+ *		`module.exports.views.blueprints = false`
+ *
+ * If you have a view file at `/views/foo/bar.ejs`, it will be rendered and served
+ * automatically via the route:  `/foo/bar`
+ *
+ */
+
+/**
+ * (5) Shortcut CRUD blueprints
  *
  * These routes can be disabled by setting (in config/controllers.js)
  *			`module.exports.controllers.blueprints.shortcuts = false`
@@ -127,7 +166,7 @@ module.exports.routes = {
  */
 
 /**
- * (5) REST blueprints
+ * (6) REST blueprints
  *
  * These routes can be disabled by setting (in config/controllers.js)
  *		`module.exports.controllers.blueprints.rest = false`
@@ -146,7 +185,7 @@ module.exports.routes = {
  */
 
 /**
- * (6) Static assets
+ * (7) Static assets
  *
  * Flat files in your `assets` directory- (these are sometimes referred to as 'public')
  * If you have an image file at `/assets/images/foo.jpg`, it will be made available
@@ -157,8 +196,6 @@ module.exports.routes = {
 
 
 /**
- * (7) 404 (not found) handler
- *
  * Finally, if nothing else matched, the default 404 handler is triggered.
  * See `config/404.js` to adjust your app's 404 logic.
  */

@@ -1,25 +1,75 @@
-<div class="row"><br>	
-<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="smallstat box" >
-							<i class="icon-shield"></i>
-						<span class="title"><a href="demo1.html"> demo1</a></span>
-						<span class="value">Made By Pallav</span>
-					</div>
-				</div><!--/col-->
-				
-				<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="smallstat box">
-							<i class="icon-shield"></i>
-						<span class="title"><a href="demo1.html"> demo2</a></span>
-						<span class="value">Made By Pallav</span>
-					</div>
-				</div><!--/col-->
-				<div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="smallstat box">
-								<i class="icon-shield"></i>
-						<span class="title"><a href="demo1.html"> demo2</a></span>
-						<span class="value">Made By Pallav</span>
-					</div>
-				</div><!--/col-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jutja</title>
+    <link type="text/css" rel="stylesheet" href="/linker/styles/reveal.css">
+        <link type="text/css" rel="stylesheet" href="/linker/styles/grid.css">
+    <link type="text/css" rel="stylesheet" href="/linker/styles/segment.css">
+     <link type="text/css" rel="stylesheet" href="/linker/styles/button.css">
+    <link type="text/css" rel="stylesheet" href="/linker/styles/form.css">
+    
+    </head>
+<body>
+    <div class="ui segment"><h3>Welcome to Jutja.com
+    Login or sign up below. To get started. </h3></div>
+  <div class="two column stackable ui grid">
+  <div class="column">
+    <div class="ui segment">
+     <form class="ui fluid form segment" action="/session/login">
+      <h3 class="ui header">Log-in</h3>
+      <div class="field">
+        <label>Username</label>
+        <input placeholder="Username" type="text" name="username">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input  placeholder="Password" type="password" name="password">
+      </div>
+      <button class="ui blue submit button" type="submit">Login</button>
+    </form>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <form class="ui fluid form segment" action="/session/signup">
+      <h3 class="ui header">Register</h3>
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text" name="fname">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text" name="lname">
+        </div>
+      </div>
+      <div class="field">
+        <label>Username</label>
+        <input placeholder="Username" type="text" name="username">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password">
+      </div>
+             <div class="field">
+        <label>Confirm Password</label>
+        <input type="password" name="password-confirm">
+      </div>
+          
+      <div class="inline field">
+        <div class="ui checkbox">
+          <input id="terms" type="checkbox">
+          <label for="terms">I agree to the terms and conditions</label>
+        </div>
+        
+      </div>
+      <button class="ui blue submit button">Submit</button>
+    </form>
+    </div>
+  </div>
 </div>
-			
+    
+
+    
+    </body>    
+</html>

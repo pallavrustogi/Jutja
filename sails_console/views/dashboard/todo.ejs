@@ -1,0 +1,208 @@
+    <html>
+    <head> <title>Jutja </title>
+    <script  src="/linker/js/jquery.js"></script>
+    <script  src="/linker/js/sidebar.js"></script>
+    <script>//random jobs 
+    $( document ).ready(function() {
+    $('.demo.sidebar')
+      .sidebar('attach events', '.sidebar_toggle');
+    });
+    </script>
+      <link href="/linker/styles/sidebar.css" rel="stylesheet">
+        <link href="/linker/styles/menu.css" rel="stylesheet">
+         <link href="/linker/styles/button.min.css" rel="stylesheet">
+          <link href="/linker/styles/icon.min.css" rel="stylesheet">
+            <link href="/linker/styles/list.css" rel="stylesheet">
+                <link href="/linker/styles/grid.css" rel="stylesheet">
+                    <link href="/linker/styles/divider.css" rel="stylesheet">
+                        <link href="/linker/styles/header.css" rel="stylesheet">
+                   <style type="text/css">
+        .item.important {
+                        
+                               border-left: 2px solid #FF5454;
+}
+            
+        .item.medium  {
+                       border-left: 2px solid #6ECFF5 ;
+
+                       }
+        .item.low  {
+                       border-left: 2px solid #78CD51;
+                           }
+                           .override {
+        margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    
+    }
+
+        </style>
+                    </head>
+    <body  class = "override">
+    <div class="ui pointing menu ">
+      <a class="active item" onclick = "$('.demo.sidebar')
+      .sidebar('attach events', '.sidebar_toggle')
+    ;">
+        <i class="home icon "></i> Dashboard
+      </a>
+      <a class="item">
+        <i class="mail icon"></i> Messages
+      </a>
+      <a class="item">
+        <i class="info icon"></i> Notifications
+      </a>
+    </div>
+    <div class="ui  vertical demo inverted sidebar menu">
+      <a class="item">
+        <i class="home icon"></i>
+        Jutja
+      </a>
+      <a class="item">
+        <i class="calendar icon"></i>
+        Calendar
+      </a>
+      <a class="item">
+        <i class="time icon"></i>
+        Time-Line
+      </a>
+      <a class="active item">
+        <i class="tasks icon"></i>
+        Todo
+      </a>
+      
+    </div>
+    </div>
+    <div class="ui tiny launch right attached button sidebar_toggle" >
+          <i class="icon list layout"></i>
+          <!-- <span class="text" style="display: none;">Menu</span> -->
+        </div>
+        <!-- start of content -->
+    <div>
+        <!-- start of grid -->
+        <div class="two column stackable ui grid">
+      <div class="column">
+            <div class="row" >
+        <div class="ui segment">
+           <!-- start of list -->
+            <h3 class="ui  black block header">
+  Tasks
+</h4>
+        <div class="ui selection list">
+            <h4 class="ui inverted red block header">
+  Important
+</h4>
+      <div class="item important">
+        <img src="images/avatar.jpg" height="35" width="35">
+           <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+        <div class="content">
+          <div class="header">Make some noodles</div>
+          4 days remaining
+        </div>
+      </div>
+      <div class="item important">
+        <img src="images/avatar2.jpg" height="35" width="35">
+          <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Collect pedigree</div>
+          A poodle, its pretty basic
+        </div>
+      </div>
+      <div class="item important">
+        <img src="images/avatar3.jpg" height="35" width="35">
+          <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Paulo</div>
+          He's also a dog
+        </div>
+      </div> <!-- end of list -->
+        </div>
+      </div>
+          </div><!-- end of row -->
+                 <div class="row ">
+                
+        <div class="ui segment">
+           <!-- start of list -->
+                  <h4 class="ui inverted blue block header">
+  Medium Priority
+</h4>
+        <div class="ui selection list">
+      <div class="item medium">
+        <img src="images/avatar.jpg" height="35" width="35">
+           <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+        <div class="content">
+          <div class="header">Make some noodles</div>
+          4 days remaining
+        </div>
+      </div>
+      <div class="item medium">
+        <img src="images/avatar2.jpg" height="35" width="35">
+          <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Collect pedigree</div>
+          A poodle, its pretty basic
+        </div>
+      </div>
+      <div class="item medium">
+        <img src="images/avatar3.jpg" height="35" width="35">
+          <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Paulo</div>
+          He's also a dog
+        </div>
+      </div> <!-- end of list -->
+        </div>
+      </div>
+          </div><!-- end of row -->
+            <div class="row ">
+        <div class="ui segment">
+           <!-- start of list -->
+             <h4 class="ui inverted green block header">
+  Low Priority
+</h4>
+        <div class="ui selection list">
+      <div class="item low">
+        <img src="images/avatar.jpg" height="35" width="35">
+           <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+        <div class="content">
+          <div class="header">Make some noodles</div>
+          4 days remaining
+        </div>
+      </div>
+      <div class="item low">
+        <img src="images/avatar2.jpg" height="35" width="35">
+          <div class="right floated mini  ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Collect pedigree</div>
+          A poodle, its pretty basic
+        </div>
+      </div>
+      <div class="item low">
+        <img src="images/avatar3.jpg" height="35" width="35">
+          <div class="right floated mini ui button"><i class="delete icon"></i></div>
+          <div class="content">
+          <div class="header">Paulo</div>
+          He's also a dog
+        </div>
+      </div> <!-- end of list -->
+        </div>
+      </div>
+          </div><!-- end of row -->
+        
+            </div>
+      <div class="column">
+        <div class="ui segment">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        </div>
+      </div>
+    </div>
+        
+       
+        
+        </div> <!-- end of list -->
+    
+    
+    </body>
+    </html>

@@ -1,2 +1,2 @@
-# console
+# jutja
 ### a Sails application
