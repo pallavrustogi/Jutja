@@ -67,7 +67,17 @@ module.exports.routes = {
     '/dashboard/todo': {
     controller: 'DashboardController',
     action: 'todo'
-    }
+    },
+     ' get /project/create': {
+        controller: 'ProjectController',
+        action: 'create'
+    },
+    //view your projects
+    ' get /project/view': {
+        controller: 'ProjectController',
+        action: 'view' 
+        }
+        
 
   /*
   // But what if you want your home page to display

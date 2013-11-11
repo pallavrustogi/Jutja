@@ -7,11 +7,19 @@
 
 module.exports = {
 
-  /* e.g.
-  sayHello: function (req, res) {
-    res.send('hello world!');
+  
+  create: function (req, res) {
+       if( req.session.authenticated){
+    res.render('project/create');
+       } else res.redirect('/');
+  },
+    view: function (req, res) {
+         if( req.session.authenticated){
+    res.render('project/view');
+         } else res.redirect('/');
   }
-  */
+    
+  
   
 
 };

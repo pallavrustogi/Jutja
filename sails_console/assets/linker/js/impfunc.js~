@@ -1,5 +1,0 @@
-//this function toggles the hide and show of any id
-var togglehide =  function(idname) {
-    var e = document.getElementById(idname);
-    if(e.style.display == 'none') e.style.display = 'block'  else e.style.display == 'none' ;
-};
