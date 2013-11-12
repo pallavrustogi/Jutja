@@ -34,10 +34,10 @@ function onLoad() {
         var graph = d3Sample();
         
         var layout = Viva.Graph.Layout.forceDirected(graph, {
-            springLength : 35,
+            springLength : 120,
             springCoeff : 0.00055,
             dragCoeff : 0.09,
-            gravity : -1
+            gravity : -100
         });
 
         var cssGraphics = Viva.Graph.View.cssGraphics();
@@ -66,14 +66,14 @@ function onLoad() {
         };
 
         svgGraphics.node(function(node){
-        	nodeSize = 18;
+        	nodeSize = 60;
             var groupId = node.data.group;
             var rectangle = Viva.Graph.svg('rect')
                 .attr("width", nodeSize)
                 .attr("height", nodeSize)
                 .attr("fill", colors[groupId ? groupId - 1 : 5]);
             
-            $(rectangle).click(function() { 
+            $(rectangle).dblclick(function() {
             	generateNewNodeOnDbClick(node.id);
             });
 
