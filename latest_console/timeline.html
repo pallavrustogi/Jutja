@@ -1,0 +1,333 @@
+<html>
+    <head> <title>Jutja </title>
+		<script  src="js/jquery.js"></script>
+		<script  src="js/sidebar.js"></script>
+		<script src="js/timeline.js"></script>
+		<script>//random jobs 
+		$(document).ready(function() {
+			$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');
+		});
+        function myFunction()
+{
+document.getElementById('col1').style.cssText = 'display:inherit !important;';
+}
+		</script>
+		<link href="css/sidebar.css" rel="stylesheet">
+		<link href="css/menu.css" rel="stylesheet">
+		<link href="css/button.min.css" rel="stylesheet">
+		<link href="css/icon.min.css" rel="stylesheet">
+		<link href="css/list.css" rel="stylesheet">
+		<link href="css/grid.css" rel="stylesheet">
+		<link href="css/divider.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+		<style type="text/css">
+			.item.important {
+				border-left: 2px solid #FF5454;
+			}
+			.item.medium  {
+				border-left: 2px solid #6ECFF5 ;
+			}
+			.item.low  {
+				border-left: 2px solid #78CD51;
+			}
+			.override {
+				margin: 0px;
+				margin-top: 0px;
+				margin-right: 0px;
+				margin-bottom: 0px;
+				margin-left: 0px;
+			}
+		</style>
+    </head>
+    <body  class = "override">
+		<div class="ui pointing menu">
+			<a class="active item" onclick = "$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');">
+				<i class="home icon "></i> Dashboard
+			</a>
+			<a class="item">
+				<i class="mail icon"></i> Messages
+			</a>
+			<a class="item">
+				<i class="info icon"></i> Notifications
+			</a>
+		</div>
+		<div class="ui  vertical demo inverted sidebar menu">
+			<a class="item">
+				<i class="home icon"></i>
+				Jutja
+			</a>
+			<a class="item">
+				<i class="calendar icon"></i>
+				Calendar
+			</a>
+			<a class="active item">
+				<i class="time icon"></i>
+				Time-Line
+			</a>
+			<a class="item">
+				<i class="tasks icon"></i>
+				Todo
+			</a>
+		</div>
+		<div class="ui tiny launch right attached button sidebar_toggle" >
+			<i class="icon list layout"></i>
+			<!-- <span class="text" style="display: none;">Menu</span> -->
+		</div>
+        <!-- start of content -->
+		<div>
+			<!-- start of grid -->
+			<div class="two column stackable ui grid">
+				<div class="column">
+					<div class="row" >
+						<div class="ui segment">
+							<!-- start of list -->
+							<h3 class="ui  black block header">
+								Timeline
+							</h3>
+							<div class="col-sm-5">
+								<div class="graph">
+									<div class="timeline">
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">appointment</span>
+													<span class="details">
+														VC in New Delhi
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>							
+											<div class="icon">
+												<i class="icon-map-marker"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="clearfix"></div>
+											<div class="timeslot alt">
+												<div class="task">
+													<span>
+														<span class="type">Git updated</span>
+														<span class="details">
+															Gladon pushed new code .
+														</span>
+														<span>
+															remaining time
+															<span class="remaining">
+																3h 38m 15s
+															</span>	
+														</span>
+													</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-phone"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Get a new logo 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<img src="images/icon.jpg" class="icon1" id="icon1" onclick="myFunction()"></img>
+												<i class="icon-envelope"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot" id="col1" style="display:none;">
+											<div class="task" style="width:35%;margin-left:3.5%;">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Finalize logo 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon" style="width:25px;height:25px;>
+												<i class="icon-envelope"></i>
+											</div>
+											<div class="time" style="padding: 3px 8px 3px 40px;">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">deadline</span>
+													<span class="details">
+														Work on some random feature
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-calendar"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">appointment</span>
+													<span class="details">
+														president of USA
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>							
+											<div class="icon">
+												<i class="icon-map-marker"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="clearfix"></div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">skype call</span>
+													<span class="details">
+														You missed a call from pallav
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span>
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-phone"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Gladon has sent a global mail.
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-envelope"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>
+										</div>
+										<div class="timeslot alt">
+											<div class="task">
+												<span>
+													<span class="type">project deadline</span>
+													<span class="details">
+														Fix the overall layout
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-calendar"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot">
+											<div class="task">
+												<span>
+													<span class="type">Digital Ocean </span>
+													<span class="details">
+														Finish article on geddy
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div class="icon">
+												<i class="icon-envelope"></i>
+											</div>
+											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+									</div>
+								</div>		
+							</div><!--/col-->	    
+						</div>
+					</div>
+				</div> <!-- end of list -->   
+			</div>
+		</div>
+	</body>
+</html>
