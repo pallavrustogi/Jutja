@@ -2,15 +2,11 @@
     <head> <title>Jutja </title>
 		<script  src="js/jquery.js"></script>
 		<script  src="js/sidebar.js"></script>
-		<script src="js/timeline.js"></script>
+		<script src="js/timelineJS.js"></script>
 		<script>//random jobs 
 		$(document).ready(function() {
 			$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');
 		});
-        function myFunction()
-{
-document.getElementById('col1').style.cssText = 'display:inherit !important;';
-}
 		</script>
 		<link href="css/sidebar.css" rel="stylesheet">
 		<link href="css/menu.css" rel="stylesheet">
@@ -87,7 +83,7 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 							</h3>
 							<div class="col-sm-5">
 								<div class="graph">
-									<div class="timeline">
+									<div class="timeline" id="allProjects">
 										<div class="timeslot">
 											<div class="task">
 												<span>
@@ -104,10 +100,34 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>							
-											<div class="icon">
-												<i class="icon-map-marker"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin11"/>
+												<input type="button" class="icon1" id="iconMin21"/>
 											</div>
 											<div class="time">
+												3:43 PM
+											</div>	
+										</div>
+										<div class="timeslot" id="col11" style="display:none;">
+											<div class="task" style="width:35%;margin-left:3.5%;">
+												<span>
+													<span class="type">mail</span>
+													<span class="details">
+														Set up 
+													</span>
+													<span>
+														remaining time
+														<span class="remaining">
+															3h 38m 15s
+														</span>	
+													</span> 
+												</span>
+												<div class="arrow"></div>
+											</div>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick="">
+											</div>
+											<div class="time" style="padding: 3px 8px 3px 40px;">
 												3:43 PM
 											</div>	
 										</div>
@@ -128,8 +148,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 													</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-phone"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -152,14 +172,14 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												<div class="arrow"></div>
 											</div>
 											<div>
-												<img src="images/icon.jpg" class="icon1" id="icon1" onclick="myFunction()"></img>
-												<i class="icon-envelope"></i>
+												<input type="button" class="icon1" id="iconMin12"/>
+												<input type="button" class="icon1" id="iconMin22"/>
 											</div>
 											<div class="time">
 												3:43 PM
 											</div>	
 										</div>
-										<div class="timeslot" id="col1" style="display:none;">
+										<div class="timeslot" id="col12" style="display:none;">
 											<div class="task" style="width:35%;margin-left:3.5%;">
 												<span>
 													<span class="type">mail</span>
@@ -175,8 +195,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon" style="width:25px;height:25px;>
-												<i class="icon-envelope"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time" style="padding: 3px 8px 3px 40px;">
 												3:43 PM
@@ -198,8 +218,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-calendar"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -221,8 +241,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>							
-											<div class="icon">
-												<i class="icon-map-marker"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -245,8 +265,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-phone"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -268,8 +288,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-envelope"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -291,8 +311,8 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-calendar"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
@@ -314,19 +334,23 @@ document.getElementById('col1').style.cssText = 'display:inherit !important;';
 												</span>
 												<div class="arrow"></div>
 											</div>
-											<div class="icon">
-												<i class="icon-envelope"></i>
+											<div>
+												<input type="button" class="icon1" id="iconMin3" onclick=""/>
 											</div>
 											<div class="time">
 												3:43 PM
 											</div>	
 										</div>
 									</div>
+									<input type="button" value="Add entry" onclick="" id="addEntry"/>	
 								</div>		
-							</div><!--/col-->	    
+							</div><!--/col-->	
+							
 						</div>
 					</div>
-				</div> <!-- end of list -->   
+					
+				</div> <!-- end of list -->  
+			
 			</div>
 		</div>
 	</body>
