@@ -4958,9 +4958,31 @@ UL.messagesList LI SPAN.date
 	box-sizing: content-box;
 }
 
+#iconMin11 {
+	background: url("../images/icon+.jpg") no-repeat;
+	}
+	
+#iconMin21 {
+	background: url("../images/icon-.jpg") no-repeat;
+	}
+#iconMin12 {
+	background: url("../images/icon+.jpg") no-repeat;
+	}
+	
+#iconMin22 {
+	background: url("../images/icon-.jpg") no-repeat;
+	}
+#iconMin3 {
+	background: url("../images/icon.jpg") no-repeat;
+}
+
 .timeslot .icon1
 {
+	
 	position: absolute;
+	height: 38px;
+	width: 24px;
+	border: none;
 	-webkit-border-radius: 50em;
 	-moz-border-radius: 50em;
 	border-radius: 50em;
