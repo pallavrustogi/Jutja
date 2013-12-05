@@ -1,0 +1,20 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Dec  1 01:00:03 2013
+Invocation: foremost -t html -q 
+Output directory: /home/bhanuc/dev/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: stdin
+Start: Sun Dec  1 01:00:03 2013
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sun Dec  1 01:08:48 2013

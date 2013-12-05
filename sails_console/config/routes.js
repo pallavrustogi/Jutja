@@ -68,9 +68,9 @@ module.exports.routes = {
     controller: 'DashboardController',
     action: 'todo'
     },
-     ' get /project/create': {
+     ' get /project/new': {
         controller: 'ProjectController',
-        action: 'create'
+        action: 'new'
     },
     //view your projects
     ' get /project/view': {

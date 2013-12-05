@@ -4,8 +4,7 @@
  * @module      :: Model
  * @description :: A short summary of how this model works and what it represents.
  *
- */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-
+ */                                                         
 module.exports = {
 
   attributes: {
@@ -19,16 +18,17 @@ module.exports = {
 	   type:  'string',
 	   required: true
 	    },
-	lastchanged:'string',
 	nodes: 'json',
-        owner: 'array',
-        viewer: 'array',
-        editor: 'array'
+    owner:'array',
+    viewer: 'json',
+    editor: 'json'
 	
 
   },
 	beforeCreate: function(values, next) {
-		values.owner.push(values.lastchanged);
+		console.log(values);
+        //console.log(session);
+        //values.owner = values.session.User.id;
 		next();
 	}
 

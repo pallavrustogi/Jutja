@@ -30,6 +30,7 @@ var SessionController = {
                 // The user has authenticated successfully, set their session
                 req.session.authenticated = true;
                 req.session.User = user;
+             
 
                 // Redirect to protected area
                 return res.redirect('/dashboard');
