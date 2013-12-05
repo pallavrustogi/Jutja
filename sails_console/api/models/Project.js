@@ -26,7 +26,7 @@ module.exports = {
 
   },
 	beforeCreate: function(values, next) {
-		console.log(values);
+		//console.log(values);
         //console.log(session);
         //values.owner = values.session.User.id;
 		next();
