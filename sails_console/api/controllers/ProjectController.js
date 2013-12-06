@@ -41,7 +41,33 @@ module.exports = {
         res.json(projects);
     });
         
-  },
+  }, //editbasic info
+    editinfo: function (req, res) {
+     var orignalowner = req.session.User.id;
+    var pname = req.param('pname');
+    var pdesc = req.param('pdesc');
+    var projectid = req.param('pid');
+        if(typeof pname != 'undefined'){
+            if(typeof pdesc != 'undefined'){
+    Project.update({
+        id: projectid
+    },{
+        name: pname,
+        description: pdesc
+    }, function(err, project) {
+        //error handling
+          if (err) {
+    return res.json({'value': 'There was a error in updating'});
+  // Updated user successfully!
+  } else {
+    res.json(project);
+  }
+});
+            }} else { 
+                res.json({'value':'all the variables not defined'})}
+        
+        
+    },
     //this deletes a single project
     delete: function (req, res) {
     var projectid = req.param('id');
