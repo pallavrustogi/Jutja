@@ -22,7 +22,7 @@ Production Env: https://www.jutja.com
 
 Dev Env       : https://dev.jutja.com
 
-The logic guide
+The Route guide .
 
 "/session/login" to login , variables required username and password
 
@@ -30,19 +30,8 @@ The logic guide
 
 "/session/logout" to logout 
 
-Our main controller is node . I am currently tring to fuse in the permission logic and stuff. Will be updating this whenever I will add anything
+"/project/view/" returns json of all your projects
+"project/create" creates a new project, required variable - pname,pdesc,
+"project/delete" deletes a project , required variable - id (which is the project_id)
 
- # Backbone Conventions
-    GET   :    /:controller            => findAll()
-    GET   :    /:controller/read/:id        => find(id)
-    POST  :    /:controller/create        => create()
-    POST  :    /:controller/create/:id        => create(id)
-    PUT   :    /:controller/update/:id        => update(id)
-    DELETE:    /:controller/destroy/:id    => destroy(id)
-
-    # You can also explicitly state the action
-    GET   :    /:controller/findAll        => findAll()
-    GET   :    /:controller/find/:id        => find(id)
-    POST  :    /:controller/create        => create(id)
-    PUT   :    /:controller/update/:id        => update(id)
-    DELETE:    /:controller/destroy/:id    => destroy(id)
+Will build up the GUI for the routes above very soon. 
