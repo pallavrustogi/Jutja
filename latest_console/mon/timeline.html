@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
     <head> <title>Jutja </title>
 		<script  src="js/jquery.js"></script>
 		<script  src="js/sidebar.js"></script>
 		<script src="js/timelineJS.js"></script>
+		<script src="js/semantic.js"></script>
 		<script>//random jobs 
 		$(document).ready(function() {
 			$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');
@@ -17,6 +19,8 @@
 		<link href="css/divider.css" rel="stylesheet">
 		<link href="css/header.css" rel="stylesheet">
 		<link href="css/style.min.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/semantic.css">
 		<style type="text/css">
 			.item.important {
 				border-left: 2px solid #FF5454;
@@ -37,6 +41,9 @@
 		</style>
     </head>
     <body  class = "override">
+	<div class="ui modal" id="div1">
+	
+	</div>
 		<div class="ui pointing menu">
 			<a class="active item" onclick = "$('.demo.sidebar').sidebar('attach events', '.sidebar_toggle');">
 				<i class="home icon "></i> Dashboard
@@ -81,7 +88,7 @@
 							<h3 class="ui  black block header">
 								Timeline
 							</h3>
-							<input type="button" onclick="addentry()" value="Add Entry" id="addEntry">
+							<input type="button" onclick="addentry()" value="Add Entry" id="addEntry" class="ui button">
 							<div class="col-sm-5">
 								<div class="graph">
 									<div class="timeline" id="allProjects"><!--
